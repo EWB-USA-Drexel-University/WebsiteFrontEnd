@@ -1,0 +1,57 @@
+Drexel EWB Website Features
+
+Homepage 
+
+Nav Bar
+
+    -edits
+        a. Make donation button in the nav bar
+
+Body
+Make changes from old EWB page
+    - Remove Youtube video
+        a. Add Picture slideshow
+    - Right hand next to video
+        a.remove all that stuff
+    - below video info area
+        a. mission information
+        b. have Drexel EWB meeting times and link to Dragon link (decide order)
+    - Remove calendar
+        - add contact information?
+        - add list of upcoming events?
+        - add styling to google calendar?
+    - Remove bullet points from the bottom of the page
+
+What We Do page - change to About Us Page
+
+    - Have paragraph related to Drexel EWB then link to EWB USA
+    - move faculty to the "meet the team page"
+    - remove all the writing from the old EWB website
+
+Our Work page - change to our projects
+
+        - Create left hand vertical nav that features international and domestic project navigation
+        - Create template for project page with space for
+            a. Background - Problem
+            b. Timeline - of trips to problem zone (?)
+            c. our work section
+            d. decide how to arrange and upload pictures    
+    
+
+Get Involved page
+
+        - Give a break down of the departments and give contact info for each of them
+        - Link to dragon link 
+        - Link to Slack
+
+Photos and Videos page - Get rid of this
+
+        Move Photos to project pages
+
+Meet The team page 
+
+     - arrange positions into one column vertical list
+     - Remove global relations and travel coordinators
+
+
+    
