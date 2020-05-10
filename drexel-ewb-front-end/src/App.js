@@ -10,6 +10,7 @@ function App() {
                 <a className='link' href='our_projects'>Our Projects</a>
                 <a className='link' href='get_involved'>Get Involved</a>
                 <a className='link' href='meet_the_team'>Meet The Team</a>
+                <a className='donateLink' href='https://www.ewb-usa.org/donate/'>Donate</a>
             </nav>
             <p>Engineers Without Borders Home</p>
         </div>

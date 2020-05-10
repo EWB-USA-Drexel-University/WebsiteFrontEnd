@@ -12,8 +12,17 @@
   font-face: Roboto;
 }
 
-.mainNav a {
+.mainNav .link {
   float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.mainNav .donateLink {
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
