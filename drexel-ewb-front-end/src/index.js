@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+
+class EWBWeb extends React.Component {
+    renderNavBar() {
+        return(
+            <div className='starter'>
+                <nav className='mainNav'>
+                    <a className='link' href='home'>Home</a>
+                    <a className='link' href='about_us'>About Us</a>
+                    <a className='link' href='our_projects'>Our Projects</a>
+                    <a className='link' href='get_involved'>Get Involved</a>
+                    <a className='link' href='meet_the_team'>Meet The Team</a>
+                    <a className='donateLink' href='https://www.ewb-usa.org/donate/'>Donate</a>
+                </nav>
+            </div>
+        );
+    }
+
+    render() {
+        return(
+            <div className='navigation'>
+                {this.renderNavBar()}
+            </div>
+        )
+    }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <EWBWeb />,
+    document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
