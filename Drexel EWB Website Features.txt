@@ -52,6 +52,11 @@ Meet The team page
 
      - arrange positions into one column vertical list
      - Remove global relations and travel coordinators
+     
+Add Drexelewb domain to github pages to host
+
+        -Point IP Addresses of Repo to host
+        -Update CNAME File with domain.
 
 
     
