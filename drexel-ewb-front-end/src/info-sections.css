@@ -1,0 +1,15 @@
+
+.info-section {
+    margin: auto;
+}
+
+.info-section {
+    width: 50%;
+    text-align: center;
+    font-family: "Roboto Light";
+}
+
+.info-section-header {
+    font-size: 18px;
+    text-align: left;
+}

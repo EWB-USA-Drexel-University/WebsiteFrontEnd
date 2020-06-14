@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import './info-sections.css'
+import content from './home.json'
 
 class EWBWeb extends React.Component {
+
     renderNavBar() {
-        return(
+        return (
             <div className='starter'>
                 <nav className='mainNav'>
                     <a className='link' href='home'>Home</a>
@@ -18,11 +21,31 @@ class EWBWeb extends React.Component {
         );
     }
 
-    render() {
-        return(
-            <div className='navigation'>
-                {this.renderNavBar()}
+    infoSection(header, body) {
+        return (
+            <div className='section-container'>
+                <div className='info-section'>
+                    <div className='info-section-header'>
+                        <h3 className='section-header'>{header}</h3>
+                    </div>
+                    <p className='section-body'>{body}</p>
+                </div>
             </div>
+        );
+    }
+
+    render() {
+
+        return(
+            <body>
+                <div className='navigation'>
+                    {this.renderNavBar()}
+                </div>
+                <div className='page-content'>
+                    {this.infoSection(content.sample.test2, content.sample.test)}
+                </div>
+            </body>
+
         )
     }
 }
