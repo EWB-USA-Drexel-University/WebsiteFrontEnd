@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import './info-sections.css'
 import content from './home.json'
+import { Slide } from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
 
 class EWBWeb extends React.Component {
 
@@ -20,6 +22,48 @@ class EWBWeb extends React.Component {
             </div>
         );
     }
+
+    slideshow() {
+
+       let properties = {
+            duration: 5000,
+            transitionDuration: 500,
+            infinite: true,
+            indicators: true,
+            arrows: true,
+            pauseOnHover: true,
+            onChange: (oldIndex, newIndex) => {
+                console.log(`slide transition from ${oldIndex} to ${newIndex}`);
+            }
+        };
+
+        return (
+            <div className='slide-container'>
+                <Slide {...properties}>
+                    <div className='each-slide'>
+                        <div className={'each-slide'}>
+                            <span><img src={require('')} alt='sample photo'
+                                       width={"80%"} height={"100%"}/></span>
+                        </div>
+                    </div>
+                    <div className='each-slide'>
+                        <div className={'each-slide'}>
+                            <span><img src={require('')} alt='sample photo'
+                                       width={"100%"} height={"100%"}/></span>
+                        </div>
+                    </div>
+                    <div className='each-slide'>
+                        <div className={'each-slide'}>
+                            <span><img src={require('')} alt='sample photo'
+                                       width={"100%"} height={"100%"}/></span>
+                        </div>
+                    </div>
+                </Slide>
+            </div>
+        )
+    }
+
+
 
     infoSection(header, body) {
         return (
@@ -42,6 +86,7 @@ class EWBWeb extends React.Component {
                     {this.renderNavBar()}
                 </div>
                 <div className='page-content'>
+                    {this.slideshow()}
                     {this.infoSection(content.sample.test2, content.sample.test)}
                 </div>
             </body>
