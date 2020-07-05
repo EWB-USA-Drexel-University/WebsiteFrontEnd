@@ -49,6 +49,19 @@ export default class App extends React.Component {
         );
     }
 
+    infoSection(header, body) {
+        return (
+            <div className='section-container'>
+                <div className='info-section'>
+                    <div className='info-section-header'>
+                        <h3 className='section-header'>{header}</h3>
+                    </div>
+                    <p className='section-body'>{body}</p>
+                </div>
+            </div>
+        );
+    }
+
     home() {
 
         function slideshow() {
@@ -91,28 +104,21 @@ export default class App extends React.Component {
             )
         }
 
-        function infoSection(header, body) {
-            return (
-                <div className='section-container'>
-                    <div className='info-section'>
-                        <div className='info-section-header'>
-                            <h3 className='section-header'>{header}</h3>
-                        </div>
-                        <p className='section-body'>{body}</p>
-                    </div>
-                </div>
-            );
-        }
 
         return (<div className='page-content'>
             {slideshow()}
-            {infoSection(content.sample.test2, content.sample.test)}
+            {this.infoSection(content.sample.test2, content.sample.test)}
         </div>
         );
     }
 
     about(){
-        return <h2>About Us</h2>;
+        return (
+            <div>
+                <h2>About Us</h2>
+                {this.infoSection(content.sample.test2, content.sample.test)}
+            </div>
+        );
     }
 
     projects() {
