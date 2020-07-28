@@ -169,12 +169,19 @@ export default class App extends React.Component {
 
     meet_the_team() {
         return (
-            <div>
+            <div className='team-content'>
                 <h2>Meet The Team</h2>
                 <div className={'row'}>
-                    <p>{this.memberProfile('Sheila', 'President')}</p>
-                    <p>{this.memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.gm)}</p>
-                    <p>{this.memberProfile('Michael', 'CFO')}</p>
+                    <p>{this.memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
+                    <p>{this.memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
+                    <p>{this.memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
+                    <p>{this.memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
+                    <p>{this.memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
+                    <p>{this.memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
+                    <p>{this.memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
+                    <p>{this.memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
+                    <p>{this.memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
+                    <p>{this.memberProfile('Betty Long', 'Event Coordinator', images.eboard.event_coord)}</p>
                 </div>
             </div>
     );
@@ -185,7 +192,7 @@ export default class App extends React.Component {
         return(
                 <div className={'column'}>
                     <div className="card">
-                        <img src={img} width={'100%'} height={'100%'} />
+                        <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'} />
                         <div className="container">
                             <h2>{name}</h2>
                             <p className="title">{position}</p>

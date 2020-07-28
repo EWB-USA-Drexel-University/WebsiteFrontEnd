@@ -18,15 +18,19 @@
     text-align: left;
 }
 
+.team-content {
+    text-align: center;
+}
+
 .column {
     float: left;
     width: 32%;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     padding: 0 8px;
 }
 
 /* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1500px) {
     .column {
         width: 100%;
         display: block;
