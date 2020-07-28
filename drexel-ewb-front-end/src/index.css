@@ -4,8 +4,21 @@
     src: url("./Roboto/Roboto-Light.ttf")
 }
 
+html, body {
+    background-color: #202324;
+}
+
 .starter{
     font-family: Roboto, Arial;
+    color: white;
+}
+
+.nav-logo {
+    display: inline-block;
+    vertical-align: top;
+    height: 3.7em;
+    width: 3.7em;
+    margin-right: 20px;
 }
 
 .mainNav{
@@ -30,8 +43,8 @@
 
 /* Slide show */
 .slide-container {
-    width: 80%;
-    height: 30%;
+    width: 90%;
+    height: 50%;
     margin: auto;
 }
 

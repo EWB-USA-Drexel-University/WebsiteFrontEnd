@@ -22,7 +22,9 @@ export default class App extends React.Component {
             <div className='starter'>
                 <Router>
                     <nav className='mainNav'>
+
                         <ul>
+                            <li><img src={images.logo.navLogo} className={'nav-logo'}/></li>
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/about'>About Us</Link></li>
                             <li><Link to='/projects'>Our Projects</Link></li>
@@ -157,10 +159,9 @@ export default class App extends React.Component {
         );
     }
 
-    // project() {
-    //     let { projectId } = useParams();
-    //     return <h3>Requested project ID: {projectId}</h3>
-    // }
+    projectInfoSection(name, background, img, timeline) {
+
+    }
 
     get_involved() {
         return <h2>Get Involved</h2>;
@@ -198,6 +199,6 @@ export default class App extends React.Component {
 
 
 ReactDOM.render(
-    <App />,
+    <App className={'app'} />,
     document.getElementById('root')
 );
