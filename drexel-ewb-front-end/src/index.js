@@ -173,6 +173,7 @@ export default class App extends React.Component {
                 <h2>Meet The Team</h2>
                 <div className={'row'}>
                     <p>{this.memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
+                    <p>{this.memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
                     <p>{this.memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
                     <p>{this.memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
                     <p>{this.memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
@@ -182,6 +183,8 @@ export default class App extends React.Component {
                     <p>{this.memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
                     <p>{this.memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
                     <p>{this.memberProfile('Betty Long', 'Event Coordinator', images.eboard.event_coord)}</p>
+                    <p>{this.memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
+                    <p>{this.memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
                 </div>
             </div>
     );
