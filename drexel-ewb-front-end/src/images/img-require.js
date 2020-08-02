@@ -16,7 +16,9 @@ const images = {
         travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg')
     },
     logo: {
-        navLogo: require('./globe-logo.png')
+        navLogo: require('./globe-logo.png'),
+        DU_EWB: require('./Drexel University Chapter_1Color.png'),
+        instaLogo: require('./insta-logo.png')
     }
 };
 

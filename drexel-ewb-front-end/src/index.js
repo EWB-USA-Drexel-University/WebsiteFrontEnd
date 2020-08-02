@@ -78,7 +78,8 @@ function App () {
                             Dragon Link</a></h2></li>
                         <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
                     </ul>
-                    <a href={'https://www.instagram.com/drexelewb/'}> EWB Instagram </a>
+                    <a href={'https://www.instagram.com/drexelewb/'}><img  style={{width:'25px', height:'25px',
+                        verticalAlign: 'bottom', paddingRight:'5px'}} src={images.logo.instaLogo}/>Drexel EWB Instagram </a>
                 </div>
             )
         }
@@ -86,6 +87,7 @@ function App () {
 
 
         return (<div className='page-content'>
+                <div style={{textAlign:'center'}}><img src={images.logo.DU_EWB} style={{height:'125px'}}/></div>
                 {slideshow()}
                 {infoSection(content.sample.test2, content.sample.test)}
                 {big_info()}
@@ -263,8 +265,8 @@ function App () {
                 </Router>
                 <footer>
                     <div style={{textAlign: 'center'}}>
-                        <h2>Engineers Without Borders Drexel University</h2>
-                        <p>Written in ReactJS</p>
+                        <h5>&#169; Engineers Without Borders: Drexel University 2020</h5>
+                        <p><a href={'https://github.com/DrexelEWBTechTeam/WebsiteFrontEnd'}>GitHub</a></p>
                     </div>
                 </footer>
             </div>

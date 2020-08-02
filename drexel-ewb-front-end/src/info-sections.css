@@ -29,13 +29,15 @@
 }
 
 .big-info ul {
-    border: groove;
+    border: outset;
+    border-width: thin;
     border-radius: 5px;
+    box-shadow: 3px 3px 3px;
 }
 
 .involvement-section li {
     display: inline-block;
-    padding: 0 100px 0 100px;
+    padding: 0 15% 0 15%;
 }
 
 .left-element {
@@ -59,6 +61,10 @@
     .column {
         width: 100%;
         display: block;
+    }
+
+    .involvement-section li {
+        padding: 0 5% 0 5%;
     }
 }
 
