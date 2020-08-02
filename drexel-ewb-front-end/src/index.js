@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import ReactDOM from 'react-dom'
+import useDarkMode from "use-dark-mode";
 import './index.css'
 import './info-sections.css'
 import content from './home.json'
@@ -15,47 +16,12 @@ import {
     useParams
 } from "react-router-dom";
 
-export default class App extends React.Component {
+function App (props) {
 
-    render() {
-        return (
-            <div className='starter'>
-                <Router>
-                    <nav className='mainNav'>
+        const { dark_mode } = useDarkMode(false);
 
-                        <ul>
-                            <li><img src={images.logo.navLogo} className={'nav-logo'}/></li>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/about'>About Us</Link></li>
-                            <li><Link to='/projects'>Our Projects</Link></li>
-                            <li><Link to='/get_involved'>Get Involved</Link></li>
-                            <li><Link to='/meet_the_team'>Meet The Team</Link></li>
-                            <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
-                        </ul>
-                    </nav>
-                    <Switch>
-                        <Route path={'/about'}>
-                            {this.about()}
-                        </Route>
-                        <Route path={'/projects'}>
-                            {this.projects()}
-                        </Route>
-                        <Route path={'/get_involved'}>
-                            {this.get_involved()}
-                        </Route>
-                        <Route path={'/meet_the_team'}>
-                            {this.meet_the_team()}
-                        </Route>
-                        <Route path={'/'}>
-                            {this.home()}
-                        </Route>
-                    </Switch>
-                </Router>
-            </div>
-        );
-    }
 
-    infoSection(header, body) {
+    const infoSection = (header, body) => {
         return (
             <div className='section-container'>
                 <div className='info-section'>
@@ -68,7 +34,7 @@ export default class App extends React.Component {
         );
     }
 
-    home() {
+   const home = () => {
 
         function slideshow() {
 
@@ -110,105 +76,146 @@ export default class App extends React.Component {
             )
         }
 
+        const big_info = () => {
+            return(
+                <div className={'big-info'}>
+                        <ul className='involvement-section'>
+                            <li className={'left-element'}><h2><a href='https://dragonlink.drexel.edu/organization/engineers-without-borders'>
+                                Dragon Link</a></h2></li>
+                            <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
+                        </ul>
+                    <a href={'https://www.instagram.com/drexelewb/'}> EWB Instagram </a>
+                </div>
+            )
+        }
+
+
 
         return (<div className='page-content'>
             {slideshow()}
-            {this.infoSection(content.sample.test2, content.sample.test)}
+            {infoSection(content.sample.test2, content.sample.test)}
+            {big_info()}
         </div>
         );
     }
 
-    about(){
+    const about = () => {
         return (
             <div>
                 <h2>About Us</h2>
-                {this.infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
             </div>
         );
     }
 
-    projects() {
+    const projects = () => {
 
         // let match = this.matchRoute();
 
         return (
             <div>
                 <h2>Projects</h2>
-                {/*    <ul>*/}
-                {/*        <li>*/}
-                {/*            <Link to={`${match.url}/project1`}>*/}
-                {/*                Project 1*/}
-                {/*            </Link>*/}
-                {/*        </li>*/}
-                {/*        <li>*/}
-                {/*            <Link to={`${match.url}/project2`}>*/}
-                {/*                Project 2*/}
-                {/*            </Link>*/}
-                {/*        </li>*/}
-                {/*    </ul>*/}
-
-                {/*<Switch>*/}
-                {/*    <Route path={`${match.path}/:projectId`}>*/}
-                {/*        {this.project()}*/}
-                {/*    </Route>*/}
-                {/*    <Route path={match.path}>*/}
-                {/*        <h3>Choose a project.</h3>*/}
-                {/*    </Route>*/}
-                {/*</Switch>*/}
+                <p>{projectInfoSection('Miramar', 'stuff that happened')}</p>
             </div>
         );
     }
 
-    projectInfoSection(name, background, img, timeline) {
+    const projectInfoSection = (name, background, img, timeline) => {
+
+        return(
+            <div className={'project'}>
+                <h1>{name}</h1>
+                <p>{background}</p>
+
+
+            </div>
+        );
 
     }
 
-    get_involved() {
+    const get_involved = () => {
         return <h2>Get Involved</h2>;
     }
 
-    meet_the_team() {
+    const memberProfile = (name, position, img) => {
+
+        return(
+            <div className={'column'}>
+                <div className="card">
+                    <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'} />
+                    <div className="container">
+                        <h2>{name}</h2>
+                        <p className="title">{position}</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    const meet_the_team = () => {
         return (
             <div className='team-content'>
                 <h2>Meet The Team</h2>
                 <div className={'row'}>
-                    <p>{this.memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
-                    <p>{this.memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
-                    <p>{this.memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
-                    <p>{this.memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
-                    <p>{this.memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
-                    <p>{this.memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
-                    <p>{this.memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
-                    <p>{this.memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
-                    <p>{this.memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
-                    <p>{this.memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
-                    <p>{this.memberProfile('Betty Long', 'Event Coordinator', images.eboard.event_coord)}</p>
-                    <p>{this.memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
-                    <p>{this.memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
+                    <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
+                    <p>{memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
+                    <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
+                    <p>{memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
+                    <p>{memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
+                    <p>{memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
+                    <p>{memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
+                    <p>{memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
+                    <p>{memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
+                    <p>{memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
+                    <p>{memberProfile('Betty Long', 'Event Coordinator', images.eboard.event_coord)}</p>
+                    <p>{memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
+                    <p>{memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
                 </div>
             </div>
     );
     }
 
-    memberProfile(name, position, img) {
 
-        return(
-                <div className={'column'}>
-                    <div className="card">
-                        <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'} />
-                        <div className="container">
-                            <h2>{name}</h2>
-                            <p className="title">{position}</p>
-                        </div>
-                    </div>
-                </div>
+
+    return (
+        <div className='starter'>
+            <Router>
+                <nav className='mainNav'>
+                    <ul>
+                        <li><img src={images.logo.navLogo} className={'nav-logo'}/></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/about'>About Us</Link></li>
+                        <li><Link to='/projects'>Our Projects</Link></li>
+                        <li><Link to='/get_involved'>Get Involved</Link></li>
+                        <li><Link to='/meet_the_team'>Meet The Team</Link></li>
+                        <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
+                        <li></li>
+                    </ul>
+                </nav>
+                <Switch>
+                    <Route path={'/about'}>
+                        {about}
+                    </Route>
+                    <Route path={'/projects'}>
+                        {projects()}
+                    </Route>
+                    <Route path={'/get_involved'}>
+                        {get_involved()}
+                    </Route>
+                    <Route path={'/meet_the_team'}>
+                        {meet_the_team()}
+                    </Route>
+                    <Route path={'/'}>
+                        {home()}
+                    </Route>
+                </Switch>
+            </Router>
+            <div className={'footer'}>
+                <p>Footer</p>
+            </div>
+        </div>
     );
-    }
-
 }
 
 
-ReactDOM.render(
-    <App className={'app'} />,
-    document.getElementById('root')
-);
+ReactDOM.render(<App/>, document.getElementById('root'));

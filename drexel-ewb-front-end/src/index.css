@@ -4,13 +4,8 @@
     src: url("./Roboto/Roboto-Light.ttf")
 }
 
-html, body {
-    background-color: #202324;
-}
-
 .starter{
     font-family: Roboto, Arial;
-    color: white;
 }
 
 .nav-logo {
@@ -41,6 +36,12 @@ html, body {
     color: #ffffff;
 }
 
+.footer {
+    margin: auto;
+    text-align: center;
+    vertical-align: bottom;
+}
+
 /* Slide show */
 .slide-container {
     width: 90%;
@@ -53,13 +54,12 @@ html, body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    height: 500px;
+    height: 50em;
 }
 
 .each-slide span {
     padding: 20px;
     font-size: 20px;
-    background: #efefef;
     text-align: center;
 }
 
