@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import useDarkMode from "use-dark-mode";
 import './index.css'
 import './info-sections.css'
 import content from './home.json'
@@ -11,15 +10,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Link
 } from "react-router-dom";
 
-function App (props) {
-
-        const { dark_mode } = useDarkMode(false);
-
+function App () {
 
     const infoSection = (header, body) => {
         return (
@@ -34,7 +28,7 @@ function App (props) {
         );
     }
 
-   const home = () => {
+    const home = () => {
 
         function slideshow() {
 
@@ -56,19 +50,19 @@ function App (props) {
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img1.jpg')} alt='sample'
-                                       width={"80%"} height={"100%"}/></span>
+                                       width={"80%"} height={"80%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img2.jpg')} alt='sample'
-                                       width={"100%"} height={"100%"}/></span>
+                                       width={"90%"} height={"90%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img3.jpg')} alt='sample'
-                                       width={"100%"} height={"100%"}/></span>
+                                       width={"89%"} height={"89%"}/></span>
                             </div>
                         </div>
                     </Slide>
@@ -79,11 +73,11 @@ function App (props) {
         const big_info = () => {
             return(
                 <div className={'big-info'}>
-                        <ul className='involvement-section'>
-                            <li className={'left-element'}><h2><a href='https://dragonlink.drexel.edu/organization/engineers-without-borders'>
-                                Dragon Link</a></h2></li>
-                            <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
-                        </ul>
+                    <ul className='involvement-section'>
+                        <li className={'left-element'}><h2><a href='https://dragonlink.drexel.edu/organization/engineers-without-borders'>
+                            Dragon Link</a></h2></li>
+                        <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
+                    </ul>
                     <a href={'https://www.instagram.com/drexelewb/'}> EWB Instagram </a>
                 </div>
             )
@@ -92,10 +86,11 @@ function App (props) {
 
 
         return (<div className='page-content'>
-            {slideshow()}
-            {infoSection(content.sample.test2, content.sample.test)}
-            {big_info()}
-        </div>
+                {slideshow()}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {big_info()}
+                {infoSection(content.sample.test2, content.sample.test)}
+            </div>
         );
     }
 
@@ -104,18 +99,24 @@ function App (props) {
             <div>
                 <h2>About Us</h2>
                 {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
             </div>
         );
     }
 
     const projects = () => {
 
-        // let match = this.matchRoute();
-
         return (
             <div>
                 <h2>Projects</h2>
                 <p>{projectInfoSection('Miramar', 'stuff that happened')}</p>
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
             </div>
         );
     }
@@ -134,7 +135,17 @@ function App (props) {
     }
 
     const get_involved = () => {
-        return <h2>Get Involved</h2>;
+        return (
+            <div>
+            <h2>Get Involved</h2>
+            <p>
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.sample.test2, content.sample.test)}
+            </p>
+    </div>
+        );
     }
 
     const memberProfile = (name, position, img) => {
@@ -172,46 +183,90 @@ function App (props) {
                     <p>{memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
                 </div>
             </div>
-    );
+        );
     }
 
+    const [darkMode, setDarkMode] = React.useState(getInitialMode());
+    React.useEffect(() => {
+        localStorage.setItem('dark', JSON.stringify(darkMode));
+    }, [darkMode]);
 
+    function getInitialMode() {
+        const isReturningUser = 'dark' in localStorage;
+        const savedMode = JSON.parse(localStorage.getItem('dark'));
+        const userPrefersDark = getPrefColorScheme();
+
+        if (isReturningUser) {
+            return savedMode;
+        } else if (userPrefersDark) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    function getPrefColorScheme() {
+        if (!window.matchMedia) return;
+
+        return window.matchMedia("(prefers-color-scheme: dark").matches;
+    }
 
     return (
-        <div className='starter'>
-            <Router>
-                <nav className='mainNav'>
-                    <ul>
-                        <li><img src={images.logo.navLogo} className={'nav-logo'}/></li>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/about'>About Us</Link></li>
-                        <li><Link to='/projects'>Our Projects</Link></li>
-                        <li><Link to='/get_involved'>Get Involved</Link></li>
-                        <li><Link to='/meet_the_team'>Meet The Team</Link></li>
-                        <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
-                        <li></li>
-                    </ul>
-                </nav>
-                <Switch>
-                    <Route path={'/about'}>
-                        {about}
-                    </Route>
-                    <Route path={'/projects'}>
-                        {projects()}
-                    </Route>
-                    <Route path={'/get_involved'}>
-                        {get_involved()}
-                    </Route>
-                    <Route path={'/meet_the_team'}>
-                        {meet_the_team()}
-                    </Route>
-                    <Route path={'/'}>
-                        {home()}
-                    </Route>
-                </Switch>
-            </Router>
-            <div className={'footer'}>
-                <p>Footer</p>
+        <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+            <div className='starter'>
+                <Router>
+                    <nav className='mainNav'>
+                        <ul>
+                            <li><img src={images.logo.navLogo} className={'nav-logo'}/></li>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/about'>About Us</Link></li>
+                            <li><Link to='/projects'>Our Projects</Link></li>
+                            <li><Link to='/get_involved'>Get Involved</Link></li>
+                            <li><Link to='/meet_the_team'>Meet The Team</Link></li>
+                            <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
+                            <li>
+                                <div className="toggle-container">
+                                    <span style={{color: darkMode ? "grey" : "yellow"}}>☀︎</span>
+                                    <span className="toggle">
+                                        <input
+                                            checked={darkMode}
+                                            onChange={() => setDarkMode(prevMode => !prevMode)}
+                                            id="checkbox"
+                                            className="checkbox"
+                                            type="checkbox"
+                                        />
+                                        <label htmlFor="checkbox"/>
+                                      </span>
+                                    <span style={{color: darkMode ? "slateblue" : "grey"}}>☾</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <Switch>
+                        <Route path={'/about'}>
+                            {about}
+                        </Route>
+                        <Route path={'/projects'}>
+                            {projects()}
+                        </Route>
+                        <Route path={'/get_involved'}>
+                            {get_involved()}
+                        </Route>
+                        <Route path={'/meet_the_team'}>
+                            {meet_the_team()}
+                        </Route>
+                        <Route path={'/'}>
+                            {home()}
+                        </Route>
+                    </Switch>
+                </Router>
+                <footer>
+                    <div style={{textAlign: 'center'}}>
+                        <h2>Engineers Without Borders Drexel University</h2>
+                        <p>Written in ReactJS</p>
+                    </div>
+                </footer>
             </div>
         </div>
     );
