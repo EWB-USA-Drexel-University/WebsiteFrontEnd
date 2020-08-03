@@ -13,7 +13,9 @@ const images = {
         domestic_design_lead: require('./eboard/dom_design_lead-malena-farber.jpg'),
         miramar_lead: require('./eboard/miramar_lead-isabella-snyder.jpeg'),
         safac_chair: require('./eboard/safac_chair-youssef-jouchiate.png'),
-        travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg')
+        travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg'),
+        fundraising_lead: require('./eboard/fundraising-patty-inroon.jpg'),
+        tech_lead: require('./eboard/tech-har-patel.jpg')
     },
     logo: {
         navLogo: require('./globe-logo.png'),

@@ -172,17 +172,19 @@ function App () {
                 <div className={'row'}>
                     <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
                     <p>{memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
-                    <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
-                    <p>{memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
                     <p>{memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
+                    <p>{memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
                     <p>{memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
+                    <p>{memberProfile('Elizabeth Clarkson', 'Event Coordinator', images.eboard.event_coord)}</p>
+                    <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
                     <p>{memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
                     <p>{memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
                     <p>{memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
                     <p>{memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
-                    <p>{memberProfile('Betty Long', 'Event Coordinator', images.eboard.event_coord)}</p>
                     <p>{memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
                     <p>{memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
+                    <p>{memberProfile('Patty Inroon', 'Fundraising Lead', images.eboard.fundraising_lead)}</p>
+                    <p>{memberProfile('Har Patel', 'Tech Lead', images.eboard.tech_lead)}</p>
                 </div>
             </div>
         );
