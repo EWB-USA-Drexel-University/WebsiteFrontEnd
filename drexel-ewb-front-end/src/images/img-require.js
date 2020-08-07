@@ -25,7 +25,6 @@ const images = {
         instaLogo: require('./insta-logo.png')
     },
     content_images: {
-        panik: require('./panik.png')
     }
 };
 
