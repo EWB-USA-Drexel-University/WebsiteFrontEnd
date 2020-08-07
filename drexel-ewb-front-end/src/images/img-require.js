@@ -15,12 +15,17 @@ const images = {
         safac_chair: require('./eboard/safac_chair-youssef-jouchiate.png'),
         travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg'),
         fundraising_lead: require('./eboard/fundraising-patty-inroon.jpg'),
-        tech_lead: require('./eboard/tech-har-patel.jpg')
+        tech_lead: require('./eboard/tech_lead-har-patel.jpg'),
+        grid_lead: require('./eboard/grid_lead-maggie-mccurdy.jpg'),
+        ecuador_lead: require('./eboard/ecuador_lead-nicole-tavormina.jpg')
     },
     logo: {
         navLogo: require('./globe-logo.png'),
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
         instaLogo: require('./insta-logo.png')
+    },
+    content_images: {
+        panik: require('./panik.png')
     }
 };
 

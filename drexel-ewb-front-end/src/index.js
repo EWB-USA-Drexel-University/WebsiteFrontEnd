@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import './info-sections.css'
 import content from './home.json'
+import info from './content/content.json';
 import images from "./images/img-require";
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
@@ -33,11 +34,11 @@ function App () {
         function slideshow() {
 
             let properties = {
-                duration: 5000,
-                transitionDuration: 500,
+                duration: 10000,
+                transitionDuration: 1000,
                 infinite: true,
                 indicators: true,
-                arrows: true,
+                arrows: false,
                 pauseOnHover: true,
                 onChange: (oldIndex, newIndex) => {
                     console.log(`slide transition from ${oldIndex} to ${newIndex}`);
@@ -50,19 +51,19 @@ function App () {
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img1.jpg')} alt='sample'
-                                       width={"80%"} height={"80%"}/></span>
+                                       width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img2.jpg')} alt='sample'
-                                       width={"90%"} height={"90%"}/></span>
+                                       width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
                             <span><img src={require('./images/img3.jpg')} alt='sample'
-                                       width={"89%"} height={"89%"}/></span>
+                                       width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
                     </Slide>
@@ -77,9 +78,9 @@ function App () {
                         <li className={'left-element'}><h2><a href='https://dragonlink.drexel.edu/organization/engineers-without-borders'>
                             Dragon Link</a></h2></li>
                         <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
+                        <li className={'insta'}><h2><a href={'https://www.instagram.com/drexelewb/'}>Instagram</a></h2></li>
                     </ul>
-                    <a href={'https://www.instagram.com/drexelewb/'}><img  style={{width:'25px', height:'25px',
-                        verticalAlign: 'bottom', paddingRight:'5px'}} src={images.logo.instaLogo}/>Drexel EWB Instagram </a>
+
                 </div>
             )
         }
@@ -91,7 +92,6 @@ function App () {
                 {slideshow()}
                 {infoSection(content.sample.test2, content.sample.test)}
                 {big_info()}
-                {infoSection(content.sample.test2, content.sample.test)}
             </div>
         );
     }
@@ -99,8 +99,8 @@ function App () {
     const about = () => {
         return (
             <div>
-                <h2>About Us</h2>
-                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(info.about.about_header, info.about.about_summary)}
+                <div style={{textAlign:'center'}}><img src={images.content_images.panik}/></div>
                 {infoSection(content.sample.test2, content.sample.test)}
                 {infoSection(content.sample.test2, content.sample.test)}
                 {infoSection(content.sample.test2, content.sample.test)}
@@ -185,6 +185,8 @@ function App () {
                     <p>{memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
                     <p>{memberProfile('Patty Inroon', 'Fundraising Lead', images.eboard.fundraising_lead)}</p>
                     <p>{memberProfile('Har Patel', 'Tech Lead', images.eboard.tech_lead)}</p>
+                    <p>{memberProfile('Maggie McCurdy', 'GRID Lead', images.eboard.grid_lead)}</p>
+                    <p>{memberProfile('Nicole Tavormina', 'Ecuador Lead', images.eboard.ecuador_lead)}</p>
                 </div>
             </div>
         );

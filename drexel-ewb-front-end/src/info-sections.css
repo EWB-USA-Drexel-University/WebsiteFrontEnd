@@ -16,7 +16,7 @@
 }
 
 .info-section-header {
-    font-size: 18px;
+    font-size: 22px;
     text-align: left;
 }
 
@@ -37,12 +37,9 @@
 
 .involvement-section li {
     display: inline-block;
-    padding: 0 15% 0 15%;
+    padding: 0 10% 0 10%;
 }
 
-.left-element {
-    border-right: groove;
-}
 
 /* Meet the team */
 .team-content {
