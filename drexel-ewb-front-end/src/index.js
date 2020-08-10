@@ -11,9 +11,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Link
 } from "react-router-dom";
 
 export default function App () {
@@ -115,9 +113,28 @@ function about() {
 
 function projects() {
 
+    let miramar = projectInfoSection('Miramar', info.about.at_Vera, images.logo.DU_EWB);
+    let ecuador = projectInfoSection('Ecuador', info.about.lorem,images.logo.instaLogo);
+
     return (
         <div>
             <h2>Projects</h2>
+            <div>
+                <div>
+                    <Router>
+                        <ul>
+                            <li><Link to='/miramar'>Miramar</Link></li>
+                            <li><Link to='/ecuador'>Ecuador</Link></li>
+                        </ul>
+                        <Switch>
+                            <Route path={'/miramar'}>{miramar}</Route>
+                            <Route path={'/ecuador'}>{ecuador}</Route>
+                        </Switch>
+                    </Router>
+
+                </div>
+            </div>
+
 
         </div>
     );
@@ -128,7 +145,12 @@ function projectInfoSection(name, background, img, timeline) {
     return (
         <div className={'project'}>
             <h1>{name}</h1>
-            <p>{background}</p>
+            <div className={'project-picture'}><img src={img}/></div>
+            <div className={'project-details'}>
+                <p>{background}</p>
+                <p>{timeline}</p>
+            </div>
+
         </div>
     );
 
@@ -139,8 +161,8 @@ function get_involved() {
         <div>
             <h2>Get Involved</h2>
             <p>
-                {infoSection(content.sample.test2, content.sample.test)}
-                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(info.get_involved.tech.tech_header, info.get_involved.tech.tech_info)}
+                {infoSection(info.get_involved.marketing.marketing_header, info.get_involved.marketing.marketing_info)}
                 {infoSection(content.sample.test2, content.sample.test)}
                 {infoSection(content.sample.test2, content.sample.test)}
             </p>

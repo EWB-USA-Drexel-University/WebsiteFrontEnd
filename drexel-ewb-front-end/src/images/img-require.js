@@ -25,6 +25,7 @@ const images = {
         instaLogo: require('./insta-logo.png')
     },
     content_images: {
+        stonks: require('./stonks.jpg')
     }
 };
 
