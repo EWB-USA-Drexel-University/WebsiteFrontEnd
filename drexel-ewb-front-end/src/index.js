@@ -120,7 +120,6 @@ function projects() {
 
     return (
         <div>
-            <h2>Projects</h2>
             <div>
                 <div>
                     {miramar}
@@ -149,13 +148,14 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
     return (
         <div className={'project'}>
             <h1>{name}</h1>
-            <div className={'project-picture'}><img src={img}/></div>
+            <div className={'project-picture'}>
+                <img src={img}/>
+            </div>
             <div className={'project-details'}>
                 <p>{background_one}</p>
                 <p>{background_two}</p>
                 <p>{timeline}</p>
             </div>
-
         </div>
     );
 

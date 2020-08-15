@@ -14,7 +14,7 @@ const images = {
         miramar_lead: require('./eboard/miramar_lead-isabella-snyder.jpeg'),
         safac_chair: require('./eboard/safac_chair-youssef-jouchiate.png'),
         travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg'),
-        fundraising_lead: require('./eboard/fundraising-patty-inroon.jpg'),
+        fundraising_lead: require('./eboard/fundraising-patty-inroon.jpeg'),
         tech_lead: require('./eboard/tech_lead-har-patel.jpg'),
         grid_lead: require('./eboard/grid_lead-maggie-mccurdy.jpg'),
         ecuador_lead: require('./eboard/ecuador_lead-nicole-tavormina.jpg')

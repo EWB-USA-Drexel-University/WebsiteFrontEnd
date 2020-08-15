@@ -40,6 +40,19 @@
     padding: 0 10% 0 10%;
 }
 
+/* projects */
+
+.project {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.project-details {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
 
 /* Meet the team */
 .team-content {
