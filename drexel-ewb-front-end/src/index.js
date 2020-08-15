@@ -166,6 +166,9 @@ function get_involved() {
         <div>
             <h2>Get Involved</h2>
             <p>
+                {infoSection(content.get_involved.domestic_design.domestic_header,
+                    content.get_involved.domestic_design.domestic_info)}
+                {infoSection(content.get_involved.grid.grid_header, content.get_involved.grid.grid_info)}
                 {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
                 {infoSection(content.get_involved.marketing_fundraising.marketing_header,
                     content.get_involved.marketing_fundraising.marketing_info)}
