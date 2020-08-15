@@ -23,9 +23,6 @@ const images = {
         navLogo: require('./globe-logo.png'),
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
         instaLogo: require('./insta-logo.png')
-    },
-    content_images: {
-        stonks: require('./stonks.jpg')
     }
 };
 

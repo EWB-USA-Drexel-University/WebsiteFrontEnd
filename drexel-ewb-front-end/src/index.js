@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import './info-sections.css'
-import content from './home.json'
-import info from './content/content.json';
+import content from './content/content.json';
 import images from "./images/img-require";
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
@@ -52,19 +51,25 @@ export default function App () {
                     <Slide {...properties}>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
-                            <span><img src={require('./images/img1.jpg')} alt='sample'
+                            <span><img src={require('./images/landscape.JPG')} alt='sample'
                                        width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
-                            <span><img src={require('./images/img2.jpg')} alt='sample'
+                            <span><img src={require('./images/circle.jpg')} alt='sample'
                                        width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
                         <div className='each-slide'>
                             <div className={'each-slide'}>
-                            <span><img src={require('./images/img3.jpg')} alt='sample'
+                            <span><img src={require('./images/hiker_hill.JPG')} alt='sample'
+                                       width={"100%"} height={"100%"}/></span>
+                            </div>
+                        </div>
+                        <div className='each-slide'>
+                            <div className={'each-slide'}>
+                            <span><img src={require('./images/surveying.jpg')} alt='sample'
                                        width={"100%"} height={"100%"}/></span>
                             </div>
                         </div>
@@ -91,7 +96,7 @@ export default function App () {
         return (<div className='page-content'>
                 <div style={{textAlign: 'center'}}><img src={images.logo.DU_EWB} style={{height: '125px'}}/></div>
                 {slideshow()}
-                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.home.mission_header,content.home.mission_body)}
                 {big_info()}
             </div>
         );
@@ -101,36 +106,35 @@ export default function App () {
 function about() {
     return (
         <div>
-            {infoSection(info.about.about_header, info.about.about_summary)}
-            <div style={{textAlign: 'center'}}><img src={images.content_images.panik}/></div>
-            {infoSection(info.about["at Vera"], info.about.lorem)}
-            {infoSection(content.sample.test2, content.sample.test)}
-            {infoSection(content.sample.test2, content.sample.test)}
-            {infoSection(content.sample.test2, content.sample.test)}
+            {infoSection(content.about.about_header, content.about.about_summary)}
         </div>
     );
 }
 
 function projects() {
 
-    let miramar = projectInfoSection('Miramar', info.about.at_Vera, images.logo.DU_EWB);
-    let ecuador = projectInfoSection('Ecuador', info.about.lorem,images.logo.instaLogo);
+    let miramar = projectInfoSection(content.projects.miramar.header, content.projects.miramar.summary.paragraph_one,
+        content.projects.miramar.summary.paragraph_two);
+    let ecuador = projectInfoSection(content.projects.ecuador.header, content.projects.ecuador.summary.paragraph_one,
+        content.projects.ecuador.summary.paragraph_two);
 
     return (
         <div>
             <h2>Projects</h2>
             <div>
                 <div>
-                    <Router>
-                        <ul>
-                            <li><Link to='/miramar'>Miramar</Link></li>
-                            <li><Link to='/ecuador'>Ecuador</Link></li>
-                        </ul>
-                        <Switch>
-                            <Route path={'/miramar'}>{miramar}</Route>
-                            <Route path={'/ecuador'}>{ecuador}</Route>
-                        </Switch>
-                    </Router>
+                    {miramar}
+                    {ecuador}
+                    {/*<Router>*/}
+                    {/*    <ul>*/}
+                    {/*        <li><Link to='/miramar'>Miramar</Link></li>*/}
+                    {/*        <li><Link to='/ecuador'>Ecuador</Link></li>*/}
+                    {/*    </ul>*/}
+                    {/*    <Switch>*/}
+                    {/*        <Route path={'/miramar'}>{miramar}</Route>*/}
+                    {/*        <Route path={'/ecuador'}>{ecuador}</Route>*/}
+                    {/*    </Switch>*/}
+                    {/*</Router>*/}
 
                 </div>
             </div>
@@ -140,14 +144,15 @@ function projects() {
     );
 }
 
-function projectInfoSection(name, background, img, timeline) {
+function projectInfoSection(name, background_one, background_two, img, timeline) {
 
     return (
         <div className={'project'}>
             <h1>{name}</h1>
             <div className={'project-picture'}><img src={img}/></div>
             <div className={'project-details'}>
-                <p>{background}</p>
+                <p>{background_one}</p>
+                <p>{background_two}</p>
                 <p>{timeline}</p>
             </div>
 
@@ -161,10 +166,9 @@ function get_involved() {
         <div>
             <h2>Get Involved</h2>
             <p>
-                {infoSection(info.get_involved.tech.tech_header, info.get_involved.tech.tech_info)}
-                {infoSection(info.get_involved.marketing.marketing_header, info.get_involved.marketing.marketing_info)}
-                {infoSection(content.sample.test2, content.sample.test)}
-                {infoSection(content.sample.test2, content.sample.test)}
+                {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
+                {infoSection(content.get_involved.marketing_fundraising.marketing_header,
+                    content.get_involved.marketing_fundraising.marketing_info)}
             </p>
         </div>
     );
