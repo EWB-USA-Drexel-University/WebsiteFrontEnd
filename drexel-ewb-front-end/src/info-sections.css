@@ -4,11 +4,6 @@
     margin: auto;
 }
 
-@font-face {
-    /*font-family: "Roboto";*/
-    /*src: url("./Roboto/Roboto-Light.ttf")*/
-}
-
 .info-section {
     width: 50%;
     text-align: center;
@@ -16,8 +11,14 @@
 }
 
 .info-section-header {
-    font-size: 22px;
+    font-family: Roboto;
+    src: url("./Roboto/Roboto-Black.ttf");
+    font-size: 25px;
     text-align: left;
+}
+
+.page-header {
+    text-align: center;
 }
 
 /* Big Info */

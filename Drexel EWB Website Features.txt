@@ -59,4 +59,14 @@ Add Drexelewb domain to github pages to host
         -Update CNAME File with domain.
 
 
+8/15/2020
+
+Combine meet the team and about us page into "About Us"
     
+    - Add blurb at top
+    - team below
+    - implement order
+
+Add pictures to project page.
+
+- Make Drexel EWB logo white for dark mode on home // Done

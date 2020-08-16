@@ -15,8 +15,6 @@ import {
 
 export default function App () {
 
-
-
     function infoSection(header, body) {
         return (
             <div className='section-container'>
@@ -93,8 +91,20 @@ export default function App () {
             )
         }
 
+        const logo_color = () => {
+            if (darkMode) {
+                return (
+                    <div style={{textAlign: 'center'}}><img src={images.logo.DU_EWB_White} style={{height: '125px'}}/></div>
+                );
+            } else {
+                return(
+                    <div style={{textAlign: 'center'}}><img src={images.logo.DU_EWB} style={{height: '125px'}}/></div>
+                    )
+            }
+        }
+
         return (<div className='page-content'>
-                <div style={{textAlign: 'center'}}><img src={images.logo.DU_EWB} style={{height: '125px'}}/></div>
+                {logo_color()}
                 {slideshow()}
                 {infoSection(content.home.mission_header,content.home.mission_body)}
                 {big_info()}
@@ -104,9 +114,54 @@ export default function App () {
 
 
 function about() {
+
+    function memberProfile(name, position, img) {
+
+        return (
+            <div className={'column'}>
+                <div className="card">
+                    <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'}/>
+                    <div className="container">
+                        <h2>{name}</h2>
+                        <p className="title">{position}</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    function meet_the_team() {
+        return (
+            <div className='team-content'>
+                <h2>Meet The Team</h2>
+                <div className={'row'}>
+                    <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
+                    <p>{memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
+                    <p>{memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
+                    <p>{memberProfile('Jared Bunch', 'Treasurer', images.eboard.treasurer)}</p>
+                    <p>{memberProfile('Maggie McCurdy', 'GRID Lead', images.eboard.grid_lead)}</p>
+                    <p>{memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
+                    <p>{memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
+                    <p>{memberProfile('Patty Inroon', 'Fundraising Lead', images.eboard.fundraising_lead)}</p>
+                    <p>{memberProfile('Will Scales', 'Global Relations Chair', images.eboard.global_relations_lead)}</p>
+                    <p>{memberProfile('Har Patel', 'Tech Lead', images.eboard.tech_lead)}</p>
+                    <p>{memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
+                    <p>{memberProfile('Elizabeth Clarkson', 'Event Coordinator', images.eboard.event_coord)}</p>
+                    <p>{memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
+                    <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
+                    <p>{memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
+                    <p>{memberProfile('Sara Scanlin', 'Social Media Chair', images.eboard.social_media)}</p>
+                    <p>{memberProfile('Darrell Omo-Lamai', 'Travel Team Coordinator', images.eboard.travel_coord)}</p>
+                    <p>{memberProfile('Nicole Tavormina', 'Ecuador Lead', images.eboard.ecuador_lead)}</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div>
             {infoSection(content.about.about_header, content.about.about_summary)}
+            {meet_the_team()}
         </div>
     );
 }
@@ -164,7 +219,9 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
 function get_involved() {
     return (
         <div>
-            <h2>Get Involved</h2>
+            <div className={"page-header"}>
+                <h2>Get Involved</h2>
+            </div>
             <p>
                 {infoSection(content.get_involved.domestic_design.domestic_header,
                     content.get_involved.domestic_design.domestic_info)}
@@ -176,49 +233,6 @@ function get_involved() {
         </div>
     );
 }
-
-function memberProfile(name, position, img) {
-
-    return (
-        <div className={'column'}>
-            <div className="card">
-                <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'}/>
-                <div className="container">
-                    <h2>{name}</h2>
-                    <p className="title">{position}</p>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function meet_the_team() {
-    return (
-        <div className='team-content'>
-            <h2>Meet The Team</h2>
-            <div className={'row'}>
-                <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
-                <p>{memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
-                <p>{memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
-                <p>{memberProfile('Will Scales', 'Global Relations Lead', images.eboard.global_relations_lead)}</p>
-                <p>{memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
-                <p>{memberProfile('Elizabeth Clarkson', 'Event Coordinator', images.eboard.event_coord)}</p>
-                <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
-                <p>{memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
-                <p>{memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
-                <p>{memberProfile('Sara Scanlin', 'Social Media Lead', images.eboard.social_media)}</p>
-                <p>{memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
-                <p>{memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
-                <p>{memberProfile('Darrell Omo-Lamai', 'Event Coordinator', images.eboard.travel_coord)}</p>
-                <p>{memberProfile('Patty Inroon', 'Fundraising Lead', images.eboard.fundraising_lead)}</p>
-                <p>{memberProfile('Har Patel', 'Tech Lead', images.eboard.tech_lead)}</p>
-                <p>{memberProfile('Maggie McCurdy', 'GRID Lead', images.eboard.grid_lead)}</p>
-                <p>{memberProfile('Nicole Tavormina', 'Ecuador Lead', images.eboard.ecuador_lead)}</p>
-            </div>
-        </div>
-    );
-}
-
 
 const [darkMode, setDarkMode] = React.useState(getInitialMode());
 React.useEffect(() => {
@@ -256,7 +270,6 @@ return (
                             <li><Link to='/about'>About Us</Link></li>
                             <li><Link to='/projects'>Our Projects</Link></li>
                             <li><Link to='/get_involved'>Get Involved</Link></li>
-                            <li><Link to='/meet_the_team'>Meet The Team</Link></li>
                             <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
                             <li>
                                 <div className="toggle-container">
@@ -285,9 +298,6 @@ return (
                         </Route>
                         <Route path={'/get_involved'}>
                             {get_involved()}
-                        </Route>
-                        <Route path={'/meet_the_team'}>
-                            {meet_the_team()}
                         </Route>
                         <Route path={'/'}>
                             {home()}

@@ -4,6 +4,16 @@
     src: url("./Roboto/Roboto-Light.ttf")
 }
 
+::-moz-selection { /* Code for Firefox */
+    /*color: red;*/
+    background: #8A8D4A;
+}
+
+::selection {
+    /*color: red;*/
+    background: #8A8D4A;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -29,7 +39,7 @@ html, body {
 }
 
 .dark-mode nav {
-    background-color: #100068;
+    background-color: #005595;
     color: #d0d0d0;
 }
 

@@ -5,6 +5,7 @@ const images = {
         vice_president: require('./eboard/vice_pres-josh-mcguckin.jpeg'),
         secretary: require('./eboard/secr-marley-downes.jpg'),
         marketing: require('./eboard/marketing-bronwyn-sayre.jpg'),
+        treasurer: require('./eboard/treasurer-jared-bunch.jpg'),
         event_coord: require('./eboard/event_coordinator-betty-long.jpg'),
         member_coord: require('./eboard/member_coordinator-katherine-comisac.jpg'),
         global_relations_lead: require('./eboard/glob_rel_lead-will-scales.JPG'),
@@ -22,7 +23,7 @@ const images = {
     logo: {
         navLogo: require('./globe-logo.png'),
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
-        instaLogo: require('./insta-logo.png')
+        DU_EWB_White: require('./du_ewb_whitelogo.png')
     }
 };
 
