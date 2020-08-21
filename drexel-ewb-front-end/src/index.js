@@ -306,7 +306,7 @@ return (
                 </div>
             </Router>
             <footer>
-                <div style={{textAlign: 'center'}}>
+                <div  className={'footer'} style={{textAlign: 'center'}}>
                     <h5>&#169; Engineers Without Borders: Drexel University 2020</h5>
                     <p><a href={'https://github.com/DrexelEWBTechTeam/WebsiteFrontEnd'}>GitHub</a></p>
                 </div>

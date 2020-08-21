@@ -64,8 +64,8 @@ Add Drexelewb domain to github pages to host
 Combine meet the team and about us page into "About Us"
     
     - Add blurb at top
-    - team below
-    - implement order
+    - team below  // Done
+    - implement order // Done
 
 Add pictures to project page.
 
