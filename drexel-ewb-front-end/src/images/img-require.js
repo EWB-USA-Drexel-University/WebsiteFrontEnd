@@ -24,6 +24,10 @@ const images = {
         navLogo: require('./globe-logo.png'),
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
         DU_EWB_White: require('./du_ewb_whitelogo.png')
+    },
+    content: {
+        gbm_image: require('./GBM-Picture.JPG'),
+        meet_n_greet: require('./meet_and_greet.jpg')
     }
 };
 

@@ -223,10 +223,16 @@ function get_involved() {
                 <h2>Get Involved</h2>
             </div>
             <p>
+                <div className={'content-img'}>
+                    <img src={images.content.gbm_image} width={'1000px'} height={'700px'}/>
+                </div>
                 {infoSection(content.get_involved.domestic_design.domestic_header,
                     content.get_involved.domestic_design.domestic_info)}
                 {infoSection(content.get_involved.grid.grid_header, content.get_involved.grid.grid_info)}
                 {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
+                <div className={'content-img'}>
+                    <img src={images.content.meet_n_greet} width={'1000px'} height={'700px'}/>
+                </div>
                 {infoSection(content.get_involved.marketing_fundraising.marketing_header,
                     content.get_involved.marketing_fundraising.marketing_info)}
             </p>
@@ -270,7 +276,7 @@ return (
                             <li><Link to='/about'>About Us</Link></li>
                             <li><Link to='/projects'>Our Projects</Link></li>
                             <li><Link to='/get_involved'>Get Involved</Link></li>
-                            <li><a href='https://www.ewb-usa.org/donate/'>Donate</a></li>
+                            <li><a href='https://support.ewb-usa.org/team/204680'>Donate</a></li>
                             <li>
                                 <div className="toggle-container">
                                     <span style={{color: darkMode ? "grey" : "yellow"}}>☀︎</span>
