@@ -169,9 +169,9 @@ function about() {
 function projects() {
 
     let miramar = projectInfoSection(content.projects.miramar.header, content.projects.miramar.summary.paragraph_one,
-        content.projects.miramar.summary.paragraph_two);
+        content.projects.miramar.summary.paragraph_two, images.content.miramar_cover);
     let ecuador = projectInfoSection(content.projects.ecuador.header, content.projects.ecuador.summary.paragraph_one,
-        content.projects.ecuador.summary.paragraph_two);
+        content.projects.ecuador.summary.paragraph_two, images.content.ecuador_cover);
 
     return (
         <div>
@@ -204,7 +204,7 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
         <div className={'project'}>
             <h1>{name}</h1>
             <div className={'project-picture'}>
-                <img src={img}/>
+                <img src={img} width={'900px'} height={'600px'}/>
             </div>
             <div className={'project-details'}>
                 <p>{background_one}</p>

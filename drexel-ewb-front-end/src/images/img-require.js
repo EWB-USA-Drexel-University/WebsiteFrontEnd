@@ -27,7 +27,9 @@ const images = {
     },
     content: {
         gbm_image: require('./GBM-Picture.JPG'),
-        meet_n_greet: require('./meet_and_greet.jpg')
+        meet_n_greet: require('./meet_and_greet.jpg'),
+        miramar_cover: require('./miramar_cover.JPG'),
+        ecuador_cover: require('./ecuador_cover.jpg')
     }
 };
 
