@@ -178,6 +178,12 @@ function projects() {
             <div>
                 <div>
                     {miramar}
+                    <div className={'embedded-video'}>
+                        <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/ItTIT9TAhRg"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+                    </div>
                     {ecuador}
                     {/*<Router>*/}
                     {/*    <ul>*/}

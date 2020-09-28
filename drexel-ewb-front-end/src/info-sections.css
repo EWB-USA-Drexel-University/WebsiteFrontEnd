@@ -60,6 +60,10 @@
     text-align: center;
 }
 
+.embedded-video {
+    text-align: center;
+}
+
 .column {
     float: left;
     width: 32%;
