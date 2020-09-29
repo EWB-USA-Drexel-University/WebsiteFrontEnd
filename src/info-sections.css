@@ -1,0 +1,126 @@
+
+/* Regular Info Section */
+.info-section {
+    margin: auto;
+}
+
+.info-section {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.info-section-header {
+    font-family: Roboto;
+    src: url("./Roboto/Roboto-Black.ttf");
+    font-size: 25px;
+    text-align: left;
+}
+
+.page-header {
+    text-align: center;
+}
+
+/* Mail Chimp Form */
+
+.mail-form {
+    padding: 20px;
+    margin: auto;
+    width: 38%;
+    text-align: center;
+    border: outset;
+    border-color: #0065b2;
+    border-width: 5px;
+}
+
+.mail-header{
+    text-align: left;
+}
+
+/* Big Info */
+
+.big-info {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.big-info ul {
+    border: outset;
+    border-width: thin;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px;
+}
+
+.involvement-section li {
+    display: inline-block;
+    padding: 0 10% 0 10%;
+}
+
+/* projects */
+
+.project {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.project-details {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+.embedded-video {
+    text-align: center;
+}
+/* Meet the team */
+.team-content {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 32%;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+/* Content Images */
+
+.content-img {
+    text-align: center;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 1500px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    .involvement-section li {
+        padding: 0 5% 0 5%;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}

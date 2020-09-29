@@ -1,0 +1,47 @@
+{
+  "home": {
+    "mission_header": "Our Mission",
+    "mission_body": "EWB-USA builds a better world through engineering projects that empower communities to meet their basic human needs and equip leaders to solve the world’s most pressing challenges."
+  },
+  "about": {
+    "about_header": "About Us",
+    "about_summary": "Engineers Without Borders USA (EWB-USA) builds a better world through engineering projects that empower communities to meet their basic human needs and equip leaders to solve the world’s most pressing challenges. Our chapter at Drexel University was established in 2007 and has since taken on two international water supply projects, as well as numerous domestic engineering projects throughout our community inPhiladelphia. Drexel EWB is #MoreThanEngineers with Fundraising, Marketing, and Technology departments."
+  },
+  "get_involved": {
+    "grid": {
+      "grid_header": "International Design",
+      "grid_info": "The role of the International Design team is to manage and implement international engineering design projects as well as bridge the gap between our chapter and the contacts in our project countries. This is achieved over the course of a 5-year project model through research, international assessment, implementation, and monitoring & evaluation trips, report writing, and general engineering project management (i.e. identify scope, stakeholders, timelines, etc). Global relations are maintained through trip coordination, phone meetings with the community representatives, email and message correspondences, all of which is mainly performed in the project country’s native language. We have the opportunity to develop real-world skills and apply what we have learned in the classroom to real-world scenarios. The best part of all is that students get this experience as a team with a humanitarian mission."
+    },
+    "domestic_design" : {
+      "domestic_header": "Domestic Design",
+      "domestic_info" : "Drexel’s Domestic Design team is the branch of our Engineers Without Borders chapter that focuses on engineering projects in the Philadelphia area. Currently we are partnered with a local urban farm that provides nutritious vegetables to an area of the city that is a food desert. We have designed and installed solar panels, a shade structure, a rainwater collection system, and an irrigation system for Sanctuary Farm Phila and continue to work on various projects with the farm. The hope is to provide technical support to the organizations that are being helped and a productive hands-on learning environment for the students involved with the team."
+    },
+    "tech": {
+      "tech_header": "Technology Team",
+      "tech_info": "The Drexel Chapter of Engineers Without Borders is a dynamic organization with substantial online content that is in constant need of update and maintenance. Tech Team is the branch of Drexel EWB designated for taking on all tasks related to communications, website content, virtual meetings, cloud-based data storage, data analysis, and all other online resources. Our on-going goals include the upkeep of the cloud-based data storage drive, increase user friendly organizational structures, maintenance of the Drexel EWB website to advertise our most recent information, and controlling admin rights for the organization’s communications such as Slack or Dragonink. We also have a list of Tech Team specific tasks that we focus on including the development of the official Drexel chapter EWB android app and the creation of 3D models of project sites. Tech Team assists in all online aspects of Drexel EWB to promote our mission in a 21st century world."
+    },
+    "marketing_fundraising": {
+      "marketing_header": "Fundraising and Marketing",
+      "marketing_info": "Drexel’s Domestic Design team is the branch of our Engineers Without Borders chapter that focuses on engineering projects in the Philadelphia area. Currently we are partnered with a local urban farm that provides nutritious vegetables to an area of the city that is a food desert. We have designed and installed solar panels, a shade structure, a rainwater collection system, and an irrigation system for Sanctuary Farm Phila and continue to work on various projects with the farm. The hope is to provide technical support to the organizations that are being helped and a productive hands-on learning environment for the students involved with the team."
+    },
+    "news_letter": {
+      "news_letter_desc": "Learn more about EWB events and meetings by signing up for our news letter!"
+    }
+  },
+  "projects": {
+    "miramar" : {
+      "header": "Miramar Project",
+      "summary": {
+        "paragraph_one": "The community of Miramar currently sources their water from wells that are riddled with bacteria, making it dangerous for the community members to utilize these sources as they stand. This project has been through multiple stages, the most recent of which is the installation of bio-sand filters which has occurred over the last decade. However, due to construction errors, these filters began to crack, making them unusable by the community. After discussing the remaining options with the community members and board, it was decided that this project needs to be completed as soon as possible to provide the community with clean water. The most viable solution to leave the community with is to purchase ecofilters for all households. This would allow households access to purified water.",
+        "paragraph_two": "Drexel EWB is currently faced with the decision to choose what kind of filter to purchase for the community. The ecofilters are made in both plastic and pewter with a disinfecting component that must be replaced every two years. While the pewter filters are larger and last longer, they are more expensive than the plastic filters, so Drexel EWB would not be able to purchase as many pewter filters as plastic."
+      }
+    },
+    "ecuador": {
+      "header": "Ecuador Project",
+      "summary": {
+        "paragraph_one": "San Luis de Yacupungo is a community of 258 people in the Cotopaxi region of Ecuador near the Cotopaxi volcano. In August 2015, the Cotopaxi volcano erupted, contaminating the community’s water sources, agriculture, and livestock which profoundly impacted the quality of life for its residents. San Luis applied for a partner project with EWB-USA to better address their vulnerable water distribution system in the face of future eruptions and community needs. Drexel EWB adopted this project in March 2018. Following adoption, two assessment trips occurred in which members of Drexel EWB traveled to San Luis to collect data and assess the community’s water distribution system. After observing the community’s current system, testing water samples, and elevation measurements the chapter understands what must be done to improve their system.",
+        "paragraph_two": "Drexel EWB wants to help the community regain its access and security to clean drinking water. The next step in helping the community is to install covers for the community’s clarifiers. Clarifiers are a component of a water distribution system in which flow is slowed to allow heavy particulates to sink to the bottom, leaving the top more potable and less turbid. Currently, in San Luis, these clarifiers are exposed to the open air and therefore easily contaminated by volcanic ash, bathing animals, and debris that blows in. Through a clarifier cover installation, the water in this phase of the system will be protected from natural forces that could cause contamination. Additionally, Drexel EWB is currently exploring the idea of replacing the pipes which carry the water from the community’s natural spring sources to the clarifier and storage tanks. Somewhere along the route, there are issues of flow inconsistencies and leakages which compromise the reliability of the system. Our next trip will be our first implementation trip and we plan to install the clarifier covers and collect more data to determine if replacing these pipes is necessary. Due to COVID-19, the trip is currently being planned for March 2021, as the pandemic has pushed our September 2020 plan."
+      }
+    }
+  }
+}
