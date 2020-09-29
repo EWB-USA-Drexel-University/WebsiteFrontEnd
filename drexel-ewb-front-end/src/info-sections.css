@@ -21,6 +21,22 @@
     text-align: center;
 }
 
+/* Mail Chimp Form */
+
+.mail-form {
+    padding: 20px;
+    margin: auto;
+    width: 38%;
+    text-align: center;
+    border: outset;
+    border-color: #0065b2;
+    border-width: 5px;
+}
+
+.mail-header{
+    text-align: left;
+}
+
 /* Big Info */
 
 .big-info {
@@ -55,12 +71,11 @@
     text-align: left;
 }
 
-/* Meet the team */
-.team-content {
+.embedded-video {
     text-align: center;
 }
-
-.embedded-video {
+/* Meet the team */
+.team-content {
     text-align: center;
 }
 

@@ -4,7 +4,8 @@ import './index.css'
 import './info-sections.css'
 import content from './content/content.json';
 import images from "./images/img-require";
-import { Slide } from 'react-slideshow-image'
+import { Slide } from 'react-slideshow-image';
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 import 'react-slideshow-image/dist/styles.css'
 import {
     BrowserRouter as Router,
@@ -222,11 +223,30 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
 
 }
 
+function mailchimp() {
+
+        const url = 'https://drexelewb.us17.list-manage.com/subscribe/post?u=eb498d0265dc0ed85f1f7d71e&amp;id=c6b77ac831';
+
+    return (
+        <div className={'mail-form'}>
+            <div className={'mail-header'}>
+                <h3>News Letter</h3>
+            </div>
+            <p>{content.get_involved.news_letter.news_letter_desc}</p>
+            <MailchimpSubscribe url={url}/>
+        </div>
+
+    );
+}
+
+
+
 function get_involved() {
     return (
         <div>
             <div className={"page-header"}>
                 <h2>Get Involved</h2>
+                {mailchimp()}
             </div>
             <p>
                 <div className={'content-img'}>
