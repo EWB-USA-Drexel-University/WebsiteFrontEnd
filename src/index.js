@@ -8,7 +8,7 @@ import { Slide } from 'react-slideshow-image';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import 'react-slideshow-image/dist/styles.css'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link
