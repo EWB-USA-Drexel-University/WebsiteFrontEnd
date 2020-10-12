@@ -4,13 +4,15 @@
     src: url("./Roboto/Roboto-Light.ttf")
 }
 
+scrollable-element {
+    scrollbar-color: red yellow;
+}
+
 ::-moz-selection { /* Code for Firefox */
-    /*color: red;*/
     background: #8A8D4A;
 }
 
 ::selection {
-    /*color: red;*/
     background: #8A8D4A;
 }
 
@@ -35,7 +37,7 @@ html, body {
 
 .dark-mode {
     background-color: #121212;
-    color: #d0d0d0;
+    color: #ffffff;
 }
 
 .dark-mode a {

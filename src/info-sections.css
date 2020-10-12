@@ -6,8 +6,11 @@
 
 .info-section {
     width: 50%;
-    text-align: center;
-    padding-bottom: 40px;
+    text-align: justify;
+    padding-bottom: 30px;
+    letter-spacing: normal;
+    line-height: 30px;
+    font-size: 18px;
 }
 
 .info-section-header {
@@ -30,7 +33,8 @@
     text-align: center;
     border: outset;
     border-color: #0065b2;
-    border-width: 5px;
+    border-width: 3px;
+    border-radius: 5px;
 }
 
 .mail-header{
