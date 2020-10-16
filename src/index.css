@@ -4,10 +4,6 @@
     src: url("./Roboto/Roboto-Light.ttf")
 }
 
-scrollable-element {
-    scrollbar-color: red yellow;
-}
-
 ::-moz-selection { /* Code for Firefox */
     background: #8A8D4A;
 }

@@ -6,6 +6,7 @@ import content from './content/content.json';
 import images from "./images/img-require";
 import { Slide } from 'react-slideshow-image';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import ReactGA from 'react-ga';
 import 'react-slideshow-image/dist/styles.css'
 import {
     HashRouter as Router,
@@ -268,6 +269,8 @@ function get_involved() {
 
 const [darkMode, setDarkMode] = React.useState(getInitialMode());
 React.useEffect(() => {
+    ReactGA.initialize('UA-180749694-1')
+    ReactGA.pageview(window.location.pathname + window.location.search);
     localStorage.setItem('dark', JSON.stringify(darkMode));
 }, [darkMode]);
 
