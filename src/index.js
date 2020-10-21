@@ -226,7 +226,7 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
 
 function mailchimp() {
 
-        const url = 'https://drexelewb.us17.list-manage.com/subscribe/post?u=eb498d0265dc0ed85f1f7d71e&amp;id=c6b77ac831';
+    const url = 'https://drexelewb.us17.list-manage.com/subscribe/post?u=eb498d0265dc0ed85f1f7d71e&amp;id=c6b77ac831';
 
     return (
         <div className={'mail-form'}>
@@ -251,14 +251,20 @@ function get_involved() {
             </div>
             <p>
                 <div className={'content-img'}>
-                    <img src={images.content.gbm_image} width={'1000px'} height={'700px'}/>
+                    <img src={images.content.domestic} width={'1200'} height={'800'}/>
                 </div>
                 {infoSection(content.get_involved.domestic_design.domestic_header,
                     content.get_involved.domestic_design.domestic_info)}
+                <div className={'content-img'}>
+                    <img src={images.content.grid} width={'1200'} height={'800'}/>
+                </div>
                 {infoSection(content.get_involved.grid.grid_header, content.get_involved.grid.grid_info)}
+                <div className={'content-img'}>
+                    <img src={images.content.tech} width={'1200'} height={'800'}/>
+                </div>
                 {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
                 <div className={'content-img'}>
-                    <img src={images.content.meet_n_greet} width={'1000px'} height={'700px'}/>
+                    <img src={images.content.meet_n_greet} width={'1200'} height={'800'}/>
                 </div>
                 {infoSection(content.get_involved.marketing_fundraising.marketing_header,
                     content.get_involved.marketing_fundraising.marketing_info)}

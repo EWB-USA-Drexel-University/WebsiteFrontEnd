@@ -73,6 +73,9 @@
     margin: auto;
     width: 50%;
     text-align: left;
+    letter-spacing: normal;
+    line-height: 30px;
+    font-size: 18px;
 }
 
 .embedded-video {

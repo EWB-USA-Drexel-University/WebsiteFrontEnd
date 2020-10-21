@@ -27,6 +27,10 @@ const images = {
     },
     content: {
         gbm_image: require('./GBM-Picture.JPG'),
+        domestic: require('./domesticGarden.jpg'),
+        domestic_two: require('./domesticGarden2.jpg'),
+        grid: require('./GRID.jpg'),
+        tech: require('./tech.JPG'),
         meet_n_greet: require('./meet_and_greet.jpg'),
         miramar_cover: require('./miramar_cover.JPG'),
         ecuador_cover: require('./ecuador_cover.jpg')
