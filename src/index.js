@@ -138,23 +138,23 @@ function about() {
                 <h2>Meet The Team</h2>
                 <div className={'row'}>
                     <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
-                    <p>{memberProfile('Josh McGuckin', 'Vice President', images.eboard.vice_president)}</p>
-                    <p>{memberProfile('Marley Downes', 'Secretary', images.eboard.secretary)}</p>
-                    <p>{memberProfile('Jared Bunch', 'Treasurer', images.eboard.treasurer)}</p>
-                    <p>{memberProfile('Maggie McCurdy', 'GRID Lead', images.eboard.grid_lead)}</p>
-                    <p>{memberProfile('Malena Farber', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
-                    <p>{memberProfile('Bronwyn Sayre', 'Marketing Lead', images.eboard.marketing)}</p>
+                    <p>{memberProfile('Bronwyn Sayre', 'Vice President', images.eboard.vice_president)}</p>
+                    <p>{memberProfile('Darrell Omo-Lamai', 'Treasurer', images.eboard.treasurer)}</p>
+                    <p>{memberProfile('Malena Farber', 'Event Coordinator', images.eboard.event_coord)}</p>
+                    <p>{memberProfile('Eva Kraus', 'Secretary', images.eboard.secretary)}</p>
+                    <p>{memberProfile('Marley Downes', 'GRID Lead', images.eboard.grid_lead)}</p>
+                    <p>{memberProfile('Kate Comisac', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>
                     <p>{memberProfile('Patty Inroon', 'Fundraising Lead', images.eboard.fundraising_lead)}</p>
-                    <p>{memberProfile('Will Scales', 'Global Relations Chair', images.eboard.global_relations_lead)}</p>
-                    <p>{memberProfile('Har Patel', 'Tech Lead', images.eboard.tech_lead)}</p>
-                    <p>{memberProfile('Youssef Jouchiate', 'SAFAC Chair', images.eboard.safac_chair)}</p>
-                    <p>{memberProfile('Elizabeth Clarkson', 'Event Coordinator', images.eboard.event_coord)}</p>
-                    <p>{memberProfile('Katherine Comisac', 'Member Coordinator', images.eboard.member_coord)}</p>
-                    <p>{memberProfile('Gavin Maguire', 'Sustainability Chair', images.eboard.sustainability_chair)}</p>
-                    <p>{memberProfile('Isabella Snyder', 'Miramar Lead', images.eboard.miramar_lead)}</p>
-                    <p>{memberProfile('Sara Scanlin', 'Social Media Chair', images.eboard.social_media)}</p>
-                    <p>{memberProfile('Darrell Omo-Lamai', 'Travel Team Coordinator', images.eboard.travel_coord)}</p>
-                    <p>{memberProfile('Nicole Tavormina', 'Ecuador Lead', images.eboard.ecuador_lead)}</p>
+                    <p>{memberProfile('Amanda Milo', 'Marketing Lead', images.eboard.marketing)}</p>
+                    <p>{memberProfile('Nathan Beebe', 'Tech Lead', images.eboard.tech_lead)}</p>
+                    <p>{memberProfile('Sukethram Sivakumar', 'Member Coordinator', images.eboard.member_coord)}</p>
+
+                    <p>{memberProfile('Will Scales', 'Global Relations Chair', images.chairs.global_relations_lead)}</p>
+                    <p>{memberProfile('Nicole Tavormina', 'Ecuador Lead', images.chairs.san_luis_lead)}</p>
+                    <p>{memberProfile('Elizabeth Clarkson', 'Sustainability Lead', images.chairs.sustainability_chair)}</p>
+                    <p>{memberProfile('Alyssa Kemp', 'Travel Coordinator', images.chairs.travel_coord)}</p>
+                    <p>{memberProfile('Justin Stiles', 'Project Finder', images.chairs.project_finder)}</p>
+
                 </div>
             </div>
         );
@@ -187,17 +187,6 @@ function projects() {
                                 allowFullScreen></iframe>
                     </div>
                     {ecuador}
-                    {/*<Router>*/}
-                    {/*    <ul>*/}
-                    {/*        <li><Link to='/miramar'>Miramar</Link></li>*/}
-                    {/*        <li><Link to='/ecuador'>Ecuador</Link></li>*/}
-                    {/*    </ul>*/}
-                    {/*    <Switch>*/}
-                    {/*        <Route path={'/miramar'}>{miramar}</Route>*/}
-                    {/*        <Route path={'/ecuador'}>{ecuador}</Route>*/}
-                    {/*    </Switch>*/}
-                    {/*</Router>*/}
-
                 </div>
             </div>
 
@@ -348,8 +337,7 @@ return (
             </Router>
             <footer>
                 <div  className={'footer'} style={{textAlign: 'center'}}>
-                    <h5>&#169; Engineers Without Borders: Drexel University 2020</h5>
-                    <p><a href={'https://github.com/DrexelEWBTechTeam/WebsiteFrontEnd'}>GitHub</a></p>
+                    <h5>&#169; Engineers Without Borders: Drexel University 2021</h5>
                 </div>
             </footer>
         </div>

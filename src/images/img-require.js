@@ -1,24 +1,24 @@
 
 const images = {
     eboard: {
-        president: require('./eboard/pres-jill-saunders.jpg'),
-        vice_president: require('./eboard/vice_pres-josh-mcguckin.jpeg'),
-        secretary: require('./eboard/secr-marley-downes.jpg'),
-        marketing: require('./eboard/marketing-bronwyn-sayre.jpg'),
-        treasurer: require('./eboard/treasurer-jared-bunch.jpg'),
-        event_coord: require('./eboard/event_coordinator-betty-long.jpg'),
-        member_coord: require('./eboard/member_coordinator-katherine-comisac.jpg'),
-        global_relations_lead: require('./eboard/glob_rel_lead-will-scales.JPG'),
-        social_media: require('./eboard/social_media-sara-scanlin.JPG'),
-        sustainability_chair: require('./eboard/sustain_chair-gavin-macguire.jpeg'),
-        domestic_design_lead: require('./eboard/dom_design_lead-malena-farber.jpg'),
-        miramar_lead: require('./eboard/miramar_lead-isabella-snyder.jpeg'),
-        safac_chair: require('./eboard/safac_chair-youssef-jouchiate.png'),
-        travel_coord: require('./eboard/travel_team_coord-darrell-omo-lamai.jpeg'),
-        fundraising_lead: require('./eboard/fundraising-patty-inroon.jpeg'),
-        tech_lead: require('./eboard/tech_lead-har-patel.jpg'),
-        grid_lead: require('./eboard/grid_lead-maggie-mccurdy.jpg'),
-        ecuador_lead: require('./eboard/ecuador_lead-nicole-tavormina.jpg')
+        president: require('./eboard/1_president-jill-saunders.jpg'),
+        vice_president: require('./eboard/2_vice_president-bronwyn-sayre.jpg'),
+        treasurer: require('./eboard/3_treasurer-darrell-omo-lamai.jpeg'),
+        event_coord: require('./eboard/4_event_coordinator-malena-farber.jpg'),
+        secretary: require('./eboard/5_secretary-eva-kraus.jpg'),
+        grid_lead: require('./eboard/6_grid_lead-marley-downes.jpg'),
+        domestic_design_lead: require('./eboard/7_domestic_lead-katherine-comisac.jpg'),
+        fundraising_lead: require('./eboard/8_fundraising-patty-inroon.jpeg'),
+        marketing: require('./eboard/9_marketing_lead-amanda-milo.jpg'),
+        tech_lead: require('./eboard/10_tech_lead-nathan-beebe.jpg'),
+        member_coord: require('./eboard/11_member_coordinator-suke-sivakumar.jpg'),
+    },
+    chairs: {
+        global_relations_lead: require('./chairs/1_global_relations_lead-will-scales.JPG'),
+        san_luis_lead: require('./chairs/2_san_luis_project_lead-nicole-tavormina.jpg'),
+        sustainability_chair: require('./chairs/3_sustainability-elizabeth-clarkson.jpg'),
+        travel_coord: require('./chairs/4_travel_coordinator-alyssa-kemp.jpg'),
+        project_finder: require('./chairs/5_project_finder-justin-stiles.jpg')
     },
     logo: {
         navLogo: require('./globe-logo.png'),
@@ -36,5 +36,4 @@ const images = {
         ecuador_cover: require('./ecuador_cover.jpg')
     }
 };
-
 export default images;
