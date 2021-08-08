@@ -122,7 +122,7 @@ function about() {
         return (
             <div className={'column'}>
                 <div className="card">
-                    <img src={img} style={{borderRadius: '5px'}} width={'475px'} height={'550px'}/>
+                    <img src={img} className={'team-image'} />
                     <div className="container">
                         <h2>{name}</h2>
                         <p className="title">{position}</p>
@@ -181,7 +181,7 @@ function projects() {
                 <div>
                     {miramar}
                     <div className={'embedded-video'}>
-                        <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/ItTIT9TAhRg"
+                        <iframe className={'project-video'} /*width="1120" height="630"*/ src="https://www.youtube-nocookie.com/embed/ItTIT9TAhRg"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen></iframe>
@@ -200,8 +200,8 @@ function projectInfoSection(name, background_one, background_two, img, timeline)
     return (
         <div className={'project'}>
             <h1>{name}</h1>
-            <div className={'project-picture'}>
-                <img src={img} width={'900px'} height={'600px'}/>
+            <div className={'project-picture-container'}>
+                <img src={img} className={'project-image'} />
             </div>
             <div className={'project-details'}>
                 <p>{background_one}</p>
@@ -239,21 +239,21 @@ function get_involved() {
                 {mailchimp()}
             </div>
             <p>
-                <div className={'content-img'}>
-                    <img src={images.content.domestic} width={'1200'} height={'800'}/>
+                <div className={'content-img-container'}>
+                    <img src={images.content.domestic} className='project-image'/>
                 </div>
                 {infoSection(content.get_involved.domestic_design.domestic_header,
                     content.get_involved.domestic_design.domestic_info)}
-                <div className={'content-img'}>
-                    <img src={images.content.grid} width={'1200'} height={'800'}/>
+                <div className={'content-img-container'}>
+                    <img src={images.content.grid} className='project-image'/>
                 </div>
                 {infoSection(content.get_involved.grid.grid_header, content.get_involved.grid.grid_info)}
-                <div className={'content-img'}>
-                    <img src={images.content.tech} width={'1200'} height={'800'}/>
+                <div className={'content-img-container'}>
+                    <img src={images.content.tech} className='project-image'/>
                 </div>
                 {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
-                <div className={'content-img'}>
-                    <img src={images.content.meet_n_greet} width={'1200'} height={'800'}/>
+                <div className={'content-img-container'}>
+                    <img src={images.content.meet_n_greet} className='project-image'/>
                 </div>
                 {infoSection(content.get_involved.marketing_fundraising.marketing_header,
                     content.get_involved.marketing_fundraising.marketing_info)}
