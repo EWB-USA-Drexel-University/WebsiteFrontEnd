@@ -7,11 +7,13 @@
 .info-section {
     width: 50%;
     text-align: justify;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     letter-spacing: normal;
-    line-height: 30px;
+    line-height: 27px;
     font-size: 18px;
 }
+
+
 
 .info-section-header {
     font-family: Roboto;
@@ -95,7 +97,7 @@
 
 .team-image {
     border-radius: 5px;
-    width: 85%;
+    width: 500px;
     height: 550px;
 }
 
@@ -127,6 +129,18 @@
     .project-video {
         width: 100%;
         height: 300px;
+    }
+
+    .info-section {
+        width: 90%;
+    }
+
+    .project-details{
+        width: 90%
+    }
+
+    .mail-form {
+        width: 80%
     }
 }
 
