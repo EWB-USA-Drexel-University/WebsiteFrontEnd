@@ -41,6 +41,7 @@ html, body {
 }
 
 .dark-mode nav {
+    background-color: #00518e;
     color: #d0d0d0;
 }
 
