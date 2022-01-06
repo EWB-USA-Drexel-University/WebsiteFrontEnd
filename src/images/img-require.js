@@ -33,7 +33,8 @@ const images = {
         tech: require('./tech.JPG'),
         meet_n_greet: require('./meet_and_greet.jpg'),
         miramar_cover: require('./miramar_cover.JPG'),
-        ecuador_cover: require('./ecuador_cover.jpg')
+        ecuador_cover: require('./ecuador_cover.jpg'),
+        sanctuary_farm_cover: require('./sanctuary_farm_cover.jpg')
     }
 };
 export default images;
