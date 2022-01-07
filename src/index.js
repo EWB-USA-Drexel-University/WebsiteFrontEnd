@@ -140,7 +140,7 @@ export default function App() {
                         <p>{memberProfile('Jillian Saunders', 'President', images.eboard.president)}</p>
                         <p>{memberProfile('Bronwyn Sayre', 'Vice President', images.eboard.vice_president)}</p>
                         <p>{memberProfile('Darrell Omo-Lamai', 'Treasurer', images.eboard.treasurer)}</p>
-                        <p>{memberProfile('Malena Farber', 'Event Coordinator', images.eboard.event_coord)}</p>
+                        <p>{memberProfile('Ned Elshafi', 'Event Coordinator', images.eboard.event_coord)}</p>
                         <p>{memberProfile('Eva Kraus', 'Secretary', images.eboard.secretary)}</p>
                         <p>{memberProfile('Marley Downes', 'GRID Lead', images.eboard.grid_lead)}</p>
                         <p>{memberProfile('Kate Comisac', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>

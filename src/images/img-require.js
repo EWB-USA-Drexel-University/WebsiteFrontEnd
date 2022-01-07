@@ -4,7 +4,7 @@ const images = {
         president: require('./eboard/1_president-jill-saunders.jpg'),
         vice_president: require('./eboard/2_vice_president-bronwyn-sayre.jpg'),
         treasurer: require('./eboard/3_treasurer-darrell-omo-lamai.jpeg'),
-        event_coord: require('./eboard/4_event_coordinator-malena-farber.jpg'),
+        event_coord: require('./eboard/4_event_coordinator-ned-elshafi.png'),
         secretary: require('./eboard/5_secretary-eva-kraus.jpg'),
         grid_lead: require('./eboard/6_grid_lead-marley-downes.jpg'),
         domestic_design_lead: require('./eboard/7_domestic_lead-katherine-comisac.jpg'),
