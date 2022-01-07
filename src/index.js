@@ -337,7 +337,7 @@ export default function App() {
                 </Router>
                 <footer>
                     <div className={'footer'} style={{ textAlign: 'center' }}>
-                        <h5>&#169; Engineers Without Borders: Drexel University 2021</h5>
+                        <h5>&#169; Engineers Without Borders: Drexel University 2022</h5>
                         <p><a href='https://github.com/EWB-USA-Drexel-University/WebsiteFrontEnd'>GitHub</a></p>
                     </div>
                 </footer>
