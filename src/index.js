@@ -175,7 +175,7 @@ export default function App() {
         let ecuador = projectInfoSection(content.projects.ecuador.header, content.projects.ecuador.summary.paragraph_one,
             content.projects.ecuador.summary.paragraph_two, images.content.ecuador_cover);
         let sanctuary_farm = projectInfoSection(content.projects.sanctuary_farm.header, content.projects.sanctuary_farm.summary.paragraph_one, 
-            content.projects.sanctuary_farm.summary.paragraph_two, images.content.sanctuary_farm_cover);
+            null, images.content.sanctuary_farm_cover);
         return (
             <div>
                 <div>
