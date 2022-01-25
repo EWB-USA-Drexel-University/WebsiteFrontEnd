@@ -21,7 +21,6 @@ const images = {
         project_finder: require('./chairs/5_project_finder-justin-stiles.jpg')
     },
     logo: {
-        navLogo: require('./globe-logo.png'),
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
         DU_EWB_White: require('./du_ewb_whitelogo.png')
     },

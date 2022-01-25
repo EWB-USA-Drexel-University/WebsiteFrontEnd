@@ -17,6 +17,20 @@ import {
 
 export default function App() {
 
+    
+    function logo_color() {
+        if (darkMode) {
+            return (
+                <div style={{ textAlign: 'center' }}><img src={images.logo.DU_EWB_White} style={{ height: '125px' }} /></div>
+            );
+        } else {
+            return (
+                <div style={{ textAlign: 'center' }}><img src={images.logo.DU_EWB} style={{ height: '125px' }} /></div>
+            )
+        }
+    }
+
+
     function infoSection(header, body) {
         return (
             <div className='section-container'>
@@ -93,20 +107,7 @@ export default function App() {
             )
         }
 
-        const logo_color = () => {
-            if (darkMode) {
-                return (
-                    <div style={{ textAlign: 'center' }}><img src={images.logo.DU_EWB_White} style={{ height: '125px' }} /></div>
-                );
-            } else {
-                return (
-                    <div style={{ textAlign: 'center' }}><img src={images.logo.DU_EWB} style={{ height: '125px' }} /></div>
-                )
-            }
-        }
-
         return (<div className='page-content'>
-            {logo_color()}
             {slideshow()}
             {infoSection(content.home.mission_header, content.home.mission_body)}
             {big_info()}
@@ -297,7 +298,6 @@ export default function App() {
                     <div>
                         <nav className='mainNav'>
                             <ul className={'link-list'}>
-                                <li><img src={images.logo.navLogo} className={'nav-logo'} /></li>
                                 <li><Link to='/'>Home</Link></li>
                                 <li><Link to='/about'>About Us</Link></li>
                                 <li><Link to='/projects'>Our Projects</Link></li>
@@ -319,6 +319,7 @@ export default function App() {
                                 </div>
                             </ul>
                         </nav>
+                        {logo_color()}
                         <Switch>
                             <Route path={'/about'}>
                                 {about()}
