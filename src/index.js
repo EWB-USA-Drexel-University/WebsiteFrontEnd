@@ -4,7 +4,6 @@ import './index.css'
 import './info-sections.css'
 import content from './content/content.json';
 import images from "./images/img-require";
-import { Slide } from 'react-slideshow-image';
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import ReactGA from 'react-ga';
 import 'react-slideshow-image/dist/styles.css'
@@ -14,6 +13,9 @@ import {
     Route,
     Link
 } from "react-router-dom";
+
+
+import {HomePage} from './components/home-page/home-page-component.js'
 
 export default function App() {
 
@@ -43,78 +45,6 @@ export default function App() {
             </div>
         );
     }
-
-    function home() {
-
-        function slideshow() {
-
-            let properties = {
-                duration: 10000,
-                transitionDuration: 1000,
-                infinite: true,
-                indicators: true,
-                arrows: false,
-                pauseOnHover: true,
-                onChange: (oldIndex, newIndex) => {
-                    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-                }
-            };
-
-            return (
-                <div className='slide-container'>
-                    <Slide {...properties}>
-                        <div className='each-slide'>
-                            <div className={'each-slide'}>
-                                <span><img src={require('./images/landscape.JPG')} alt='sample'
-                                    width={"100%"} height={"100%"} /></span>
-                            </div>
-                        </div>
-                        <div className='each-slide'>
-                            <div className={'each-slide'}>
-                                <span><img src={require('./images/circle.jpg')} alt='sample'
-                                    width={"100%"} height={"100%"} /></span>
-                            </div>
-                        </div>
-                        <div className='each-slide'>
-                            <div className={'each-slide'}>
-                                <span><img src={require('./images/hiker_hill.JPG')} alt='sample'
-                                    width={"100%"} height={"100%"} /></span>
-                            </div>
-                        </div>
-                        <div className='each-slide'>
-                            <div className={'each-slide'}>
-                                <span><img src={require('./images/surveying.jpg')} alt='sample'
-                                    width={"100%"} height={"100%"} /></span>
-                            </div>
-                        </div>
-                    </Slide>
-                </div>
-            )
-        }
-
-        const big_info = () => {
-            return (
-                <div className={'big-info'}>
-                    <ul className='involvement-section'>
-                        <li className={'left-element'}><h2><a
-                            href='https://dragonlink.drexel.edu/organization/engineers-without-borders'>
-                            Dragon Link</a></h2></li>
-                        <li className={'right-element'}><h2><Link to='/get_involved'>Get Involved</Link></h2></li>
-                        <li className={'insta'}><h2><a href={'https://www.instagram.com/drexelewb/'}>Instagram</a></h2>
-                        </li>
-                    </ul>
-                </div>
-            )
-        }
-
-        return (<div className='page-content'>
-            {slideshow()}
-            {infoSection(content.home.mission_header, content.home.mission_body)}
-            {big_info()}
-        </div>
-        );
-    }
-
 
     function about() {
 
@@ -331,7 +261,7 @@ export default function App() {
                                 {get_involved()}
                             </Route>
                             <Route path={'/'}>
-                                {home()}
+                                <HomePage />
                             </Route>
                         </Switch>
                     </div>
