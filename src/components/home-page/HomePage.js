@@ -4,7 +4,8 @@ import {
 } from "react-router-dom";
 import content from '../../content/content.json';
 import {SlideShow} from './SlideShow.js';
-export function HomePage(){
+
+export default function HomePage(){
     function infoSection(header, body) {
         return (
             <div className='section-container'>
