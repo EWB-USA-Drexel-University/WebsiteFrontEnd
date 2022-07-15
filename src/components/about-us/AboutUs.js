@@ -1,8 +1,8 @@
 import React from 'react'
-import '../index.css'
-import '../info-sections.css'
-import images from '../images/img-require'
-import content from '../content/content.json'
+import '../../index.css'
+import '../../info-sections.css'
+import images from '../../images/img-require'
+import content from '../../content/content.json'
 
 export default function AboutUs() {
 
