@@ -2,20 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import './info-sections.css'
-import content from './content/content.json'
-import images from './images/img-require'
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
-import ReactGA from 'react-ga'
-import 'react-slideshow-image/dist/styles.css'
+import content from './content/content.json';
+import images from "./images/img-require";
+
+import ReactGA from 'react-ga';
 import {
     HashRouter as Router,
     Switch,
     Route,
     Link
-} from "react-router-dom"
-import HomePage from './components/home-page/HomePage.js'
+} from "react-router-dom";
 import AboutUs from './components/about-us/AboutUs'
-import Projects from './components/projects-page/ProjectPage'
+import HomePage from './components/home-page/HomePage'
+import GetInvolved from './components/get-involved/GetInvolved'
 
 export default function App() {
 
@@ -32,64 +31,53 @@ export default function App() {
         }
     }
 
-    function infoSection(header, body) {
-        return (
-            <div className='section-container'>
-                <div className='info-section'>
-                    <div className='info-section-header'>
-                        <h3 className='section-header'>{header}</h3>
-                    </div>
-                    <p className='section-body'>{body}</p>
-                </div>
-            </div>
-        );
-    }
 
-    function mailchimp() {
 
-        const url = 'https://drexelewb.us17.list-manage.com/subscribe/post?u=eb498d0265dc0ed85f1f7d71e&amp;id=c6b77ac831';
+    function projects() {
 
-        return (
-            <div className={'mail-form'}>
-                <div className={'mail-header'}>
-                    <h3>News Letter</h3>
-                </div>
-                <p>{content.get_involved.news_letter.news_letter_desc}</p>
-                <MailchimpSubscribe url={url} />
-            </div>
-
-        );
-    }
-
-    function get_involved() {
+        let miramar = projectInfoSection(content.projects.miramar.header, content.projects.miramar.summary.paragraph_one,
+            content.projects.miramar.summary.paragraph_two, images.content.miramar_cover);
+        let ecuador = projectInfoSection(content.projects.ecuador.header, content.projects.ecuador.summary.paragraph_one,
+            content.projects.ecuador.summary.paragraph_two, images.content.ecuador_cover);
+        let sanctuary_farm = projectInfoSection(content.projects.sanctuary_farm.header, content.projects.sanctuary_farm.summary.paragraph_one,
+            null, images.content.sanctuary_farm_cover);
         return (
             <div>
-                <div className={"page-header"}>
-                    <h2>Get Involved</h2>
-                    {mailchimp()}
+                <div>
+                    <div>
+                        {miramar}
+                        <div className={'embedded-video'}>
+                            <iframe className={'project-video'} src="https://www.youtube-nocookie.com/embed/ItTIT9TAhRg"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+                        </div>
+                        {ecuador}
+                        {sanctuary_farm}
+                    </div>
                 </div>
-                <p>
-                    <div className={'content-img-container'}>
-                        <img src={images.content.domestic} className='project-image' />
-                    </div>
-                    {infoSection(content.get_involved.domestic_design.domestic_header,
-                        content.get_involved.domestic_design.domestic_info)}
-                    <div className={'content-img-container'}>
-                        <img src={images.content.grid} className='project-image' />
-                    </div>
-                    {infoSection(content.get_involved.grid.grid_header, content.get_involved.grid.grid_info)}
-                    <div className={'content-img-container'}>
-                        <img src={images.content.tech} className='project-image' />
-                    </div>
-                    {infoSection(content.get_involved.tech.tech_header, content.get_involved.tech.tech_info)}
-                    <div className={'content-img-container'}>
-                        <img src={images.content.meet_n_greet} className='project-image' />
-                    </div>
-                    {infoSection(content.get_involved.marketing_fundraising.marketing_header,
-                        content.get_involved.marketing_fundraising.marketing_info)}
-                </p>
+
+
             </div>
         );
+    }
+
+    function projectInfoSection(name, background_one, background_two, img, timeline) {
+
+        return (
+            <div className={'project'}>
+                <h1>{name}</h1>
+                <div className={'project-picture-container'}>
+                    <img src={img} className={'project-image'} />
+                </div>
+                <div className={'project-details'}>
+                    <p>{background_one}</p>
+                    <p>{background_two}</p>
+                    <p>{timeline}</p>
+                </div>
+            </div>
+        );
+
     }
 
     const [darkMode, setDarkMode] = React.useState(getInitialMode());
@@ -155,7 +143,7 @@ export default function App() {
                                 <Projects />
                             </Route>
                             <Route path={'/get_involved'}>
-                                {get_involved()}
+                                <GetInvolved />
                             </Route>
                             <Route path={'/'}>
                                 <HomePage />
