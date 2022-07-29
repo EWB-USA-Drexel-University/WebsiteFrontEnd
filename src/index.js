@@ -2,9 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import './info-sections.css'
-import content from './content/content.json';
 import images from "./images/img-require";
-
 import ReactGA from 'react-ga';
 import {
     HashRouter as Router,
@@ -15,10 +13,10 @@ import {
 import AboutUs from './components/about-us/AboutUs'
 import HomePage from './components/home-page/HomePage'
 import GetInvolved from './components/get-involved/GetInvolved'
+import Projects from './components/projects-page/ProjectPage'
 
 export default function App() {
 
-    
     function logo_color() {
         if (darkMode) {
             return (
@@ -29,55 +27,6 @@ export default function App() {
                 <div style={{ textAlign: 'center' }}><img src={images.logo.DU_EWB} style={{ height: '125px' }} /></div>
             )
         }
-    }
-
-
-
-    function projects() {
-
-        let miramar = projectInfoSection(content.projects.miramar.header, content.projects.miramar.summary.paragraph_one,
-            content.projects.miramar.summary.paragraph_two, images.content.miramar_cover);
-        let ecuador = projectInfoSection(content.projects.ecuador.header, content.projects.ecuador.summary.paragraph_one,
-            content.projects.ecuador.summary.paragraph_two, images.content.ecuador_cover);
-        let sanctuary_farm = projectInfoSection(content.projects.sanctuary_farm.header, content.projects.sanctuary_farm.summary.paragraph_one,
-            null, images.content.sanctuary_farm_cover);
-        return (
-            <div>
-                <div>
-                    <div>
-                        {miramar}
-                        <div className={'embedded-video'}>
-                            <iframe className={'project-video'} src="https://www.youtube-nocookie.com/embed/ItTIT9TAhRg"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen></iframe>
-                        </div>
-                        {ecuador}
-                        {sanctuary_farm}
-                    </div>
-                </div>
-
-
-            </div>
-        );
-    }
-
-    function projectInfoSection(name, background_one, background_two, img, timeline) {
-
-        return (
-            <div className={'project'}>
-                <h1>{name}</h1>
-                <div className={'project-picture-container'}>
-                    <img src={img} className={'project-image'} />
-                </div>
-                <div className={'project-details'}>
-                    <p>{background_one}</p>
-                    <p>{background_two}</p>
-                    <p>{timeline}</p>
-                </div>
-            </div>
-        );
-
     }
 
     const [darkMode, setDarkMode] = React.useState(getInitialMode());

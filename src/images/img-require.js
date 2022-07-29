@@ -1,24 +1,16 @@
 
 const images = {
     eboard: {
-        president: require('./eboard/1_president-jill-saunders.jpg'),
-        vice_president: require('./eboard/2_vice_president-bronwyn-sayre.jpg'),
+        president: require('./eboard/1_president-bronwyn-sayre.jpg'),
+        vice_president: require('./eboard/2_vice_president-katherine-comisac.jpg'),
         treasurer: require('./eboard/3_treasurer-darrell-omo-lamai.jpeg'),
-        event_coord: require('./eboard/4_event_coordinator-ned-elshafi.png'),
-        secretary: require('./eboard/5_secretary-eva-kraus.jpg'),
-        grid_lead: require('./eboard/6_grid_lead-marley-downes.jpg'),
-        domestic_design_lead: require('./eboard/7_domestic_lead-katherine-comisac.jpg'),
-        fundraising_lead: require('./eboard/8_fundraising-patty-inroon.jpeg'),
-        marketing: require('./eboard/9_marketing_lead-amanda-milo.jpg'),
-        tech_lead: require('./eboard/10_tech_lead-nathan-beebe.jpg'),
-        member_coord: require('./eboard/11_member_coordinator-suke-sivakumar.jpg'),
-    },
-    chairs: {
-        global_relations_lead: require('./chairs/1_global_relations_lead-will-scales.JPG'),
-        san_luis_lead: require('./chairs/2_san_luis_project_lead-nicole-tavormina.jpg'),
-        sustainability_chair: require('./chairs/3_sustainability-elizabeth-clarkson.jpg'),
-        travel_coord: require('./chairs/4_travel_coordinator-alyssa-kemp.jpg'),
-        project_finder: require('./chairs/5_project_finder-justin-stiles.jpg')
+        secretary: require('./eboard/4_secretary-chris-bahr.jpg'),
+        grid_lead: require('./eboard/5_grid_lead-eva-kraus.jpg'),
+        domestic_design_lead: require('./eboard/6_domestic_lead-michael-luciano.jpg'),
+        fundraising_lead: require('./eboard/7_fundraising_lead-suke-sivakumar.jpg'),
+        marketing: require('./eboard/8_marketing_lead-amanda-milo.jpg'),
+        tech_lead: require('./eboard/9_tech_lead-yonatan-wiese-namir.jpeg'),
+        member_coord: require('./eboard/10_member_coordinator-sofia-martinez.JPG'),
     },
     logo: {
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
