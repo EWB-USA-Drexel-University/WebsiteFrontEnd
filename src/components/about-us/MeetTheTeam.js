@@ -25,7 +25,7 @@ export default function MeetTheTeam() {
                 <div className={'row'}>
                     <p>{memberProfile('Bronwyn Sayre', 'President', images.eboard.president)}</p>
                     <p>{memberProfile('Kate Comisac', 'Vice President', images.eboard.vice_president)}</p>
-                    <p>{memberProfile('Darrell Omo-Lamai', 'Treasurer', images.eboard.treasurer)}</p>
+                    <p>{memberProfile('Suketh Sivakumar', 'Treasurer', images.eboard.treasurer)}</p>
                     <p>{memberProfile('Chris Bahr', 'Secretary', images.eboard.secretary)}</p>
                     <p>{memberProfile('Eva Kraus', 'GRID Lead', images.eboard.grid_lead)}</p>
                     <p>{memberProfile('Michael Luciano', 'Domestic Design Lead', images.eboard.domestic_design_lead)}</p>

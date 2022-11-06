@@ -3,14 +3,13 @@ const images = {
     eboard: {
         president: require('./eboard/1_president-bronwyn-sayre.jpg'),
         vice_president: require('./eboard/2_vice_president-katherine-comisac.jpg'),
-        treasurer: require('./eboard/3_treasurer-darrell-omo-lamai.jpeg'),
+        treasurer: require('./eboard/3_treasurer-sukethram-sivakumar.jpg'),
         secretary: require('./eboard/4_secretary-chris-bahr.jpg'),
         grid_lead: require('./eboard/5_grid_lead-eva-kraus.jpg'),
         domestic_design_lead: require('./eboard/6_domestic_lead-michael-luciano.jpg'),
-        fundraising_lead: require('./eboard/7_fundraising_lead-suke-sivakumar.jpg'),
-        marketing: require('./eboard/8_marketing_lead-amanda-milo.jpg'),
-        tech_lead: require('./eboard/9_tech_lead-yonatan-wiese-namir.jpeg'),
-        member_coord: require('./eboard/10_member_coordinator-sofia-martinez.JPG'),
+        marketing: require('./eboard/7_marketing_lead-amanda-milo.jpg'),
+        tech_lead: require('./eboard/8_tech_lead-yonatan-wiese-namir.jpeg'),
+        member_coord: require('./eboard/9_member_coordinator-sofia-martinez.JPG'),
     },
     logo: {
         DU_EWB: require('./Drexel University Chapter_1Color.png'),
