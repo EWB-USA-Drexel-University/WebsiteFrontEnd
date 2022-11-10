@@ -88,17 +88,17 @@
     text-align: center;
 }
 
-.column {
+/* .column {
     float: left;
     width: 32%;
     margin-bottom: 15px;
     padding: 0 8px;
-}
+} */
 
 .team-image {
     border-radius: 5px;
-    width: 500px;
-    height: 560px;
+    width: 30%;
+    height: 20%;
 }
 
 /* Content Images */
@@ -110,6 +110,7 @@
 .project-image {
     width: 50%;
     height: 10%;
+    border-radius: 5px;
 }
 
 .project-video {
@@ -145,30 +146,30 @@
 }
 
 /* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 1200px) {
-    .column {
-        width: 100%;
-        display: block;
-    }
+@media screen and (max-width: 900px) {
 
     .involvement-section li {
         padding: 0 5% 0 5%;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        display: contents !important;
+        align-items: center;
+        margin: 0% 20% 0% 20%;
     }
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    display: flex;
+    margin: 0% 20% 0% 20%;
 }
 
 .container {
-    padding: 0 16px;
-}
-
-/* Clear floats */
-.container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
+    padding: 0 8px;
+    margin: auto;
 }
 
 .title {
