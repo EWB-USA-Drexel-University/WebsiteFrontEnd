@@ -1,4 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#  Engineers Without Borders: Drexel Unviersity Website
+
+## Project Description
+
+The Website Front End Project is a front end that displays information regarding Engineers Without Borders on a website.  This website is a representation of the Drexel University Engineers Without Borders chapter.  It mainly consists of images and text displaying information about the chapter.
+
+## How to run this project
+
+The website can be run by simply installing NodeJS, then running `npm install`, and starting with `npm start`.
+
+<br />
+
+### *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 ## Available Scripts
 
