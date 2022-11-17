@@ -4,10 +4,20 @@
 
 The Website Front End Project is a front end that displays information regarding Engineers Without Borders on a website.  This website is a representation of the Drexel University Engineers Without Borders chapter.  It mainly consists of images and text displaying information about the chapter.
 
+This project uses [ReactJS](https://reactjs.org/) Framework.
+
 ## How to run this project
 
-The website can be run by simply installing NodeJS, then running `npm install`, and starting with `npm start`.
+The website can be run by simply installing [NodeJS](https://nodejs.org/en/), then running `npm install`, and starting with `npm start`.
 
+
+## Deployment Information
+
+This project uses Google Firebase Hosting to deploy the production build.
+
+[https://firebase.google.com/docs/hosting/github-integration](https://firebase.google.com/docs/hosting/github-integration)
+
+---
 <br />
 
 ### *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
