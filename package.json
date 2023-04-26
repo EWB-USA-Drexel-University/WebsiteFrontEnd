@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^7.2.1",
     "dotenv": "^8.2.0",
+    "firebase": "^9.20.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-ga": "^3.3.0",

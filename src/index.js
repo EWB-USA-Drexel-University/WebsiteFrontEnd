@@ -14,6 +14,7 @@ import AboutUs from './components/about-us/AboutUs'
 import HomePage from './components/home-page/HomePage'
 import GetInvolved from './components/get-involved/GetInvolved'
 import Projects from './components/projects-page/ProjectPage'
+import DataPage from "./components/data-tracking/DataPage";
 
 export default function App() {
 
@@ -81,6 +82,7 @@ export default function App() {
                                     </span>
                                     <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
                                 </div>
+                                <li><Link to='/data-tracking' replace>Data</Link></li>
                             </ul>
                         </nav>
                         {logo_color()}
@@ -96,6 +98,9 @@ export default function App() {
                             </Route>
                             <Route path={'/'}>
                                 <HomePage />
+                            </Route>
+                            <Route path={'/data-tracking'}>
+                                <DataPage />
                             </Route>
                         </Switch>
                     </div>
