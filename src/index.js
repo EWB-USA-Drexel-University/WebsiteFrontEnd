@@ -5,8 +5,8 @@ import './info-sections.css'
 import images from "./images/img-require";
 import ReactGA from 'react-ga';
 import {
-    HashRouter as Router,
-    Switch,
+    BrowserRouter,
+    Routes,
     Route,
     Link
 } from "react-router-dom";
@@ -14,6 +14,7 @@ import AboutUs from './components/about-us/AboutUs'
 import HomePage from './components/home-page/HomePage'
 import GetInvolved from './components/get-involved/GetInvolved'
 import Projects from './components/projects-page/ProjectPage'
+import Login from './components/login/Login'
 
 export default function App() {
 
@@ -58,7 +59,7 @@ export default function App() {
     return (
         <div className={darkMode ? 'dark-mode' : 'light-mode'}>
             <div className='starter'>
-                <Router>
+                <BrowserRouter>
                     <div>
                         <nav className='mainNav'>
                             <ul className={'link-list'}>
@@ -84,22 +85,15 @@ export default function App() {
                             </ul>
                         </nav>
                         {logo_color()}
-                        <Switch>
-                            <Route path={'/about'}>
-                                <AboutUs />
-                            </Route>
-                            <Route path={'/projects'}>
-                                <Projects />
-                            </Route>
-                            <Route path={'/get_involved'}>
-                                <GetInvolved />
-                            </Route>
-                            <Route path={'/'}>
-                                <HomePage />
-                            </Route>
-                        </Switch>
+                        <Routes>
+                            <Route path={'/login'} element={<Login />} />
+                            <Route path={'/about'} element={<AboutUs />} />
+                            <Route path={'/projects'} element={<Projects />} />
+                            <Route path={'/get_involved'} element={<GetInvolved />} />
+                            <Route path={'/'} element={<HomePage />} />
+                        </Routes>
                     </div>
-                </Router>
+                </BrowserRouter>
                 <footer>
                     <div className={'footer'} style={{ textAlign: 'center' }}>
                         <h5>&#169; Engineers Without Borders: Drexel University 2022</h5>

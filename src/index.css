@@ -195,3 +195,9 @@ input[type="checkbox"].checkbox + label {
     margin: 0;
     background: #adceed;
 }
+
+.login-form {
+    text-align: center;
+    margin: auto;
+    flex: auto;
+}
