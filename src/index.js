@@ -67,6 +67,7 @@ export default function App() {
                                 <li><Link to='/about'>About Us</Link></li>
                                 <li><Link to='/projects'>Our Projects</Link></li>
                                 <li><Link to='/get_involved'>Get Involved</Link></li>
+                                <li><Link to='/data_tracking'>Data</Link></li>
                                 <li><a href='https://support.ewb-usa.org/team/204680'>Donate</a></li>
                                 <div className="toggle-container">
                                     <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
@@ -82,11 +83,13 @@ export default function App() {
                                     </span>
                                     <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
                                 </div>
-                                <li><Link to='/data-tracking' replace>Data</Link></li>
                             </ul>
                         </nav>
                         {logo_color()}
                         <Switch>
+                            <Route path={'/data_tracking'}>
+                                <DataPage />
+                            </Route>
                             <Route path={'/about'}>
                                 <AboutUs />
                             </Route>
@@ -98,9 +101,6 @@ export default function App() {
                             </Route>
                             <Route path={'/'}>
                                 <HomePage />
-                            </Route>
-                            <Route path={'/data-tracking'}>
-                                <DataPage />
                             </Route>
                         </Switch>
                     </div>
